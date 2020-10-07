@@ -1,11 +1,20 @@
-(function () {window.renderGame = function(data) {
-    const gameElement = document.querySelector('body');
-    const mapElement = window.makeMap();
-    gameElement.appendChild(mapElement);
-    const itemElements = window.makeItems(data.items);
-    const informationElements = window.makeInformations(data.informations);
-    for (let i = 0; i < data.items.length; i++) {
-        gameElement.appendChild(itemElements[i]);
-        gameElement.appendChild(informationElements[i]);
-    }
-};})();
+(function () {
+    window.renderGame = function(levelNumber, data) {
+        //igra
+        const gameElement = document.querySelector('body');
+        //karta
+        const mapElement = window.makeMap();
+        gameElement.appendChild(mapElement);
+        //knopki
+        const buttonElements = window.makeButtons(levelNumber);
+        buttonElements.forEach(button => {
+            gameElement.appendChild(button);
+        });
+        //kartinki
+        const pictureElements = window.makePictures(data);
+        pictureElements.forEach(picture => {
+            gameElement.appendChild(picture.item);
+            gameElement.appendChild(picture.information);
+        });
+    };
+})();
