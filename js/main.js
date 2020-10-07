@@ -1,13 +1,12 @@
+const LEVEL_NUMBER = 3;
 const PICTURE_DATA = [
     {
         item: {
-            width: '30px',
-            height: '30px',
+            width: '3%',
         },
         information: {
-            width: '300px',
-            height: '300px',
+            width: '100%',
         },
     },
 ];
-window.renderGame(PICTURE_DATA);
+window.renderGame(LEVEL_NUMBER, PICTURE_DATA);
