@@ -1,3 +1,4 @@
+window.height = 0.437;
 const LEVEL_NUMBER = 3;
 const PICTURE_DATA = [
     {
