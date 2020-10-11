@@ -6,7 +6,7 @@
         const mapElement = window.makeMap();
         gameElement.appendChild(mapElement);
         //knopki
-        const buttonElements = window.makeButtons(levelNumber);
+        const buttonElements = window.makeButtons(levelNumber, mapElement);
         buttonElements.forEach(button => {
             gameElement.appendChild(button);
         });
