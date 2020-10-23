@@ -24,6 +24,7 @@
             });
             button.addEventListener('mouseup', function() {
                 button.style.filter = `brightness(${BUTTON_BRIGHTNESS.mouseOver})`;
+                
             });
             gameElement.appendChild(button);
         });
