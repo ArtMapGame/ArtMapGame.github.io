@@ -1,5 +1,5 @@
 window.height = 0.437;
-const LEVEL_NUMBER = [0, 0, 0];
+const LEVEL_NUMBERS = [[1, 0, 0], [0, 0, 0], [0, 0, 0]];
 const PICTURE_DATA = [
     {
         item: {
@@ -21,4 +21,4 @@ const VIEW_DATA = {
         },
     },
 };
-window.renderGame(LEVEL_NUMBER, PICTURE_DATA, VIEW_DATA);
+window.renderGame(LEVEL_NUMBERS, PICTURE_DATA, VIEW_DATA);
