@@ -1,15 +1,13 @@
 (function () {
-    const buttonWidth = 13;
-    const buttonSpace = 13;
-    window.makeButtons = function(levelNumber, mapElement) {
+    window.makeButtons = function(levelNumber, viewData) {
         const buttonElements = [];
-        for (let i = 1; i < levelNumber + 1; i++) {
+        for (let i = 1; i < levelNumber.length + 1; i++) {
             const buttonElement = document.createElement('img');
             buttonElement.src = `img/buttons/play${i}.png`;
             buttonElement.style.position = 'absolute';
-            buttonElement.style.left = ((100 - buttonWidth * levelNumber - buttonSpace * (levelNumber - 1)) / 2 + (buttonWidth + buttonSpace) * (i - 1)) + '%';
-            buttonElement.style.top = (100 - buttonWidth / window.height) / 2 + '%';
-            buttonElement.style.width = buttonWidth + '%';
+            buttonElement.style.left = ((100 - viewData.width * levelNumber.length - viewData.space * (levelNumber.length - 1)) / 2 + (viewData.width + viewData.space) * (i - 1)) + '%';
+            buttonElement.style.top = (100 - viewData.width / window.height) / 2 + '%';
+            buttonElement.style.width = viewData.width + '%';
             buttonElements.push(buttonElement);
         }
         return buttonElements;
