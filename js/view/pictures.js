@@ -12,7 +12,7 @@
             informationElement.src = `img/informations/information${index + 1}.png`;
             informationElement.style.position = 'absolute';
             informationElement.style.left = '0';
-            informationElement.style.width = data.information.width;
+            informationElement.style.width = data.informationWidth;
             informationElement.style.display = 'none';
             pictureElements.push({
                 item: itemElement,
