@@ -8,11 +8,6 @@
             historyElement.style.left = (100 - width) / 2 + '%';
             historyElement.style.width = width + '%';
             historyElement.style.display = 'none';
-            document.addEventListener('keydown', function(evt) {
-                if (evt.keyCode === 32) {
-                    historyElements[index].style.display = 'none';
-                }
-            });
             historyElements.push(historyElement);
         }); 
         return historyElements;

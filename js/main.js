@@ -2,7 +2,7 @@ window.height = 0.437;
 const LEVEL_NUMBERS = [
     [
         {
-            type: 'maps',
+            type: 'history',
             number: 1,
         },
         {

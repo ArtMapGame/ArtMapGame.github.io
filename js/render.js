@@ -25,6 +25,7 @@
             });
             button.addEventListener('mouseup', function() {
                 button.style.filter = `brightness(${viewData.button.brightness.mouseOver})`;
+                buttonElements.forEach(button => button.style.display = 'none');
                 let minPicture = 0;
                 let minHistory = 0;
                 for (let j = 0; j < i; j++) {
