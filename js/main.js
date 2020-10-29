@@ -1,15 +1,54 @@
 window.height = 0.437;
-const LEVEL_NUMBERS = [[1, 0, 0], [0, 0, 0], [0, 0, 0]];
+const LEVEL_NUMBERS = [
+    [
+        {
+            type: 'history',
+            number: 1,
+        },
+        {
+            type: 'history',
+        },
+        {
+            type: 'pictures',
+            number: 1,
+        },
+    ],
+    [
+        {
+            type: 'maps',
+            number: 1,
+        },
+        {
+            type: 'history',
+        },
+        {
+            type: 'pictures',
+            number: 1,
+        },
+    ],
+    [
+        {
+            type: 'maps',
+            number: 1,
+        },
+        {
+            type: 'history',
+        },
+        {
+            type: 'pictures',
+            number: 1,
+        },
+    ],
+];
 const PICTURE_DATA = [
     {
         item: {
             width: '3%',
         },
-        information: {
-            width: '100%',
-        },
+        informationWidth: '100%',
     },
 ];
+const HISTORY_DATA = [100, 50, 78];
 const VIEW_DATA = {
     button: {
         width: 13,
@@ -21,4 +60,4 @@ const VIEW_DATA = {
         },
     },
 };
-window.renderGame(LEVEL_NUMBERS, PICTURE_DATA, VIEW_DATA);
+window.renderGame(LEVEL_NUMBERS, PICTURE_DATA, HISTORY_DATA, VIEW_DATA);
