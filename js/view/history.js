@@ -1,7 +1,7 @@
 (() => {
-    window.makeHistory = (data) => {
+    window.makeHistory = () => {
         const historyElements = [];
-        data.forEach((width, index) => {
+        window.VIEW_DATA.historyWidth.forEach((width, index) => {
             const historyElement = document.createElement('img');
             historyElement.src = `img/levels/level${index + 1}.png`;
             historyElement.style.position = 'absolute';

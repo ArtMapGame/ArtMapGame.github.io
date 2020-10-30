@@ -1,4 +1,4 @@
-const LEVEL_NUMBERS = [
+window.LEVEL_NUMBERS = [
     [
         {
             type: 'history',
@@ -39,7 +39,7 @@ const LEVEL_NUMBERS = [
         },
     ],
 ];
-const PICTURE_DATA = [
+window.PICTURE_DATA = [
     {
         item: {
             width: '3%',
@@ -47,7 +47,7 @@ const PICTURE_DATA = [
         informationWidth: '100%',
     },
 ];
-const VIEW_DATA = {
+window.VIEW_DATA = {
     windowHeight: 0.437,
     button: {
         width: 13,
@@ -58,6 +58,7 @@ const VIEW_DATA = {
             mouseDown: 0.2,
         },
     },
-    history: [100, 50, 75],
+    historyWidth: [100, 50, 75],
+    mapInterval: 1000,
 };
-window.renderGame(LEVEL_NUMBERS, PICTURE_DATA, VIEW_DATA);
+window.renderGame();

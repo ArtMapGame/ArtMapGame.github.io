@@ -1,7 +1,7 @@
 (() => {
-    window.makePictures = (data) => {
+    window.makePictures = () => {
         const pictureElements = [];
-        data.forEach((data, index) => {
+        window.PICTURE_DATA.forEach((data, index) => {
             const itemElement = document.createElement('img');
             itemElement.src = `img/items/item${index + 1}.png`;
             itemElement.style.position = 'absolute';
