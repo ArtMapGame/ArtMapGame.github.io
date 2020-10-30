@@ -1,5 +1,5 @@
-(function () {
-    window.makePictures = function(data) {
+(() => {
+    window.makePictures = (data) => {
         const pictureElements = [];
         data.forEach((data, index) => {
             const itemElement = document.createElement('img');
