@@ -1,13 +1,13 @@
-(function () {
-    window.makeButtons = function(levelNumber, viewData) {
+(() => {
+    window.makeButtons = (levelNumber, buttonData, windowHeight) => {
         const buttonElements = [];
         for (let i = 1; i < levelNumber.length + 1; i++) {
             const buttonElement = document.createElement('img');
             buttonElement.src = `img/buttons/play${i}.png`;
             buttonElement.style.position = 'absolute';
-            buttonElement.style.left = ((100 - viewData.width * levelNumber.length - viewData.space * (levelNumber.length - 1)) / 2 + (viewData.width + viewData.space) * (i - 1)) + '%';
-            buttonElement.style.top = (100 - viewData.width / window.height) / 2 + '%';
-            buttonElement.style.width = viewData.width + '%';
+            buttonElement.style.left = ((100 - buttonData.width * levelNumber.length - buttonData.space * (levelNumber.length - 1)) / 2 + (buttonData.width + buttonData.space) * (i - 1)) + '%';
+            buttonElement.style.top = (100 - buttonData.width / windowHeight) / 2 + '%';
+            buttonElement.style.width = buttonData.width + '%';
             buttonElements.push(buttonElement);
         }
         return buttonElements;

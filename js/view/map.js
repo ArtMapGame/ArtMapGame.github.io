@@ -1,5 +1,5 @@
-(function () {
-    window.makeMap = function() {
+(() => {
+    window.makeMap = () => {
         const gameElement = document.querySelector('body');
         gameElement.style.margin = '0';
         gameElement.style.position = 'relative';

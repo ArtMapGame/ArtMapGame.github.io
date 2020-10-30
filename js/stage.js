@@ -1,19 +1,12 @@
-(function () {
-    const closeHistory = (picturesElements, historyElements, pictureData, stageNumbers, evt) => {
-        if (evt.keyCode === 32 || evt.key === 32) {
-            historyElements[0].style.display = 'none';
-            document.removeEventListener('keydown', closeHistory.bind(null, picturesElements, historyElements, pictureData, stageNumbers));
-            window.startStage(picturesElements, historyElements.slice(1), pictureData, stageNumbers.slice(1));
-        }
-    };
-    window.startStage = function(picturesElements, historyElements, pictureData, stageNumbers) {
+(() => {
+    window.startStage = (picturesElements, historyElements, mapElements, pictureData, stageNumbers) => {
         switch(stageNumbers[0].type) {
             case 'maps':
-                //
+                window.openMaps(picturesElements, historyElements, mapElements, pictureData, stageNumbers);
                 break
             case 'history':
                 historyElements[0].style.display = 'inline-block';
-                document.addEventListener('keydown', closeHistory.bind(null, picturesElements, historyElements, pictureData, stageNumbers));
+                document.addEventListener('keydown', window.closeHistory.bind(null, picturesElements, historyElements, mapElements, pictureData, stageNumbers));
                 break
             case 'pictures':
                 //

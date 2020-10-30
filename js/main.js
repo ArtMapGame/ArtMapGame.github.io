@@ -1,12 +1,11 @@
-window.height = 0.437;
 const LEVEL_NUMBERS = [
     [
         {
             type: 'history',
-            number: 1,
         },
         {
-            type: 'history',
+            type: 'maps',
+            number: 5,
         },
         {
             type: 'pictures',
@@ -48,8 +47,8 @@ const PICTURE_DATA = [
         informationWidth: '100%',
     },
 ];
-const HISTORY_DATA = [100, 50, 78];
 const VIEW_DATA = {
+    windowHeight: 0.437,
     button: {
         width: 13,
         space: 13,
@@ -59,5 +58,6 @@ const VIEW_DATA = {
             mouseDown: 0.2,
         },
     },
+    history: [100, 50, 75],
 };
-window.renderGame(LEVEL_NUMBERS, PICTURE_DATA, HISTORY_DATA, VIEW_DATA);
+window.renderGame(LEVEL_NUMBERS, PICTURE_DATA, VIEW_DATA);

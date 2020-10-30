@@ -1,5 +1,5 @@
-(function () {
-    window.makeHistory = function(data) {
+(() => {
+    window.makeHistory = (data) => {
         const historyElements = [];
         data.forEach((width, index) => {
             const historyElement = document.createElement('img');
