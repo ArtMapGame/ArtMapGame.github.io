@@ -42,7 +42,7 @@
                             case 'history':
                                 minHistory = minHistory + 1;
                                 break
-                            case 'map':
+                            case 'maps':
                                 minMap = minMap + stage.number;
                         }
                     });
@@ -58,7 +58,7 @@
                         case 'history':
                             maxHistory = maxHistory + 1;
                             break
-                        case 'map':
+                        case 'maps':
                             maxMap = maxMap + stage.number;
                     }
                 });
