@@ -4,7 +4,7 @@
             pictureElements[i].item.style.display = 'inline-block';
             pictureElements[i].item.style.left = pictureData[i].item.x - pictureData[i].item.width / 2;
             pictureElements[i].item.style.top = pictureData[i].item.y;
-            //moveEvent
+            window.addStartMoveListener(pictureElements[i].item, pictureData[i].item.width);
             //sizeEvent
             //informationEvent
         }
