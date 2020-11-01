@@ -42,7 +42,9 @@ window.LEVEL_NUMBERS = [
 window.PICTURE_DATA = [
     {
         item: {
-            width: '3%',
+            width: 3,
+            x: 15,
+            y: 15,
         },
         informationWidth: '100%',
     },
@@ -59,6 +61,6 @@ window.VIEW_DATA = {
         },
     },
     historyWidth: [100, 50, 75],
-    mapInterval: 1000,
+    mapInterval: 1,
 };
 window.renderGame();
