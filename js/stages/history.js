@@ -1,9 +1,15 @@
 (() => {
-    window.closeHistory = (picturesElements, historyElements, mapElements, pictureData, stageNumbers, evt) => {
+    let closeHistoryBind;
+    const closeHistory = (pictureElements, historyElements, mapElements, pictureData, stageNumbers, evt) => {
         if (evt.keyCode === 32 || evt.key === 32) {
             historyElements[0].style.display = 'none';
-            document.removeEventListener('keydown', closeHistory.bind(null, picturesElements, historyElements, mapElements, pictureData, stageNumbers));
-            window.startStage(picturesElements, historyElements.slice(1), mapElements, pictureData, stageNumbers.slice(1));
+            document.removeEventListener('keydown', closeHistoryBind);
+            window.startStage(pictureElements, historyElements.slice(1), mapElements, pictureData, stageNumbers.slice(1));
         }
+    };
+    window.reciteHistory = (pictureElements, historyElements, mapElements, pictureData, stageNumbers) => {
+        historyElements[0].style.display = 'inline-block';
+        closeHistoryBind = closeHistory.bind(null, pictureElements, historyElements, mapElements, pictureData, stageNumbers);
+        document.addEventListener('keydown', closeHistoryBind);
     };
 })();

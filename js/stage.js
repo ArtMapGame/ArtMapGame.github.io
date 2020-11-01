@@ -1,14 +1,14 @@
 (() => {
-    window.startStage = (picturesElements, historyElements, mapElements, pictureData, stageNumbers) => {
+    window.startStage = (pictureElements, historyElements, mapElements, pictureData, stageNumbers) => {
         switch(stageNumbers[0].type) {
             case 'maps':
-                window.openMaps(picturesElements, historyElements, mapElements, pictureData, stageNumbers, stageNumbers[0].number);
+                window.openMaps(pictureElements, historyElements, mapElements, pictureData, stageNumbers);
                 break
             case 'history':
-                historyElements[0].style.display = 'inline-block';
-                document.addEventListener('keydown', window.closeHistory.bind(null, picturesElements, historyElements, mapElements, pictureData, stageNumbers));
+                window.reciteHistory(pictureElements, historyElements, mapElements, pictureData, stageNumbers);
                 break
             case 'pictures':
+                window.startPictures(pictureElements, historyElements, mapElements, pictureData, stageNumbers);
                 break
             default:
                 throw Error('Такого типа нету((((((((((((((((((((((((');
