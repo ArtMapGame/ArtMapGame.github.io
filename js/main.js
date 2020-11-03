@@ -9,7 +9,7 @@ window.LEVEL_NUMBERS = [
         },
         {
             type: 'pictures',
-            number: 1,
+            number: 3,
         },
     ],
     [
@@ -44,6 +44,22 @@ window.PICTURE_DATA = [
         item: {
             width: 3,
             x: 15,
+            y: 15,
+        },
+        informationWidth: '100%',
+    },
+    {
+        item: {
+            width: 3,
+            x: 15,
+            y: 15,
+        },
+        informationWidth: '100%',
+    },
+    {
+        item: {
+            width: 3,
+            x: 45,
             y: 15,
         },
         informationWidth: '100%',
