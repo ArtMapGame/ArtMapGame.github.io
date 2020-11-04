@@ -73,7 +73,7 @@ export const renderGame = (viewData, levelNumbers, pictureData) => {
                         maxMap = maxMap + stage.number;
                 }
             });
-            startLevel(pictureElements.slice(minPicture, maxPicture), historyElements.slice(minHistory, maxHistory), mapElements.slice(minMap, maxMap), pictureData.slice(minPicture, maxPicture), levelNumbers[i]);
+            startLevel(pictureElements.slice(minPicture, maxPicture), historyElements.slice(minHistory, maxHistory), mapElements.slice(minMap, maxMap), pictureData.slice(minPicture, maxPicture), levelNumbers[i], viewData);
         });
         gameElement.appendChild(buttonElements[-1].getElement());
     }

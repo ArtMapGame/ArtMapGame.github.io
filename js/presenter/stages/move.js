@@ -1,4 +1,4 @@
-(() => {
+/*(() => {
     let itemElement;
     let mouse;
     let startItem;
@@ -31,4 +31,4 @@
         itemElement.addEventListener('mousedown', startMove);
         itemElement.addEventListener('mouseup', endMove);
     };
-})();
+})();*/
