@@ -1,11 +1,10 @@
-(() => {
-    window.makeMap = () => {
-        const gameElement = document.querySelector('body');
-        gameElement.style.margin = '0';
-        gameElement.style.position = 'relative';
-        const mapElement = document.createElement('img');
-        mapElement.src = 'img/maps/background.png';
-        mapElement.style.width = '100%';
-        return mapElement;
-    };
-})();
+import viewComponent from `js/view/view.js`;
+export default class mapComponent extends viewComponent {
+    constructor(index) {
+        super();
+        this.setImage(`img/maps/world${index + 1}.png`);
+        this.setX(0);
+        this.setWidth(100);
+        this.hide();
+    }
+};

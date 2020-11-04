@@ -1,60 +1,60 @@
-window.LEVEL_NUMBERS = [
+import {renderGame} from `js/render.js`;
+LEVEL_NUMBERS = [
     [
         {
-            type: 'history',
+            type: `history`,
         },
         {
-            type: 'maps',
+            type: `maps`,
             number: 5,
         },
         {
-            type: 'pictures',
+            type: `pictures`,
             number: 3,
         },
     ],
     [
         {
-            type: 'maps',
-            number: 1,
+            type: `history`,
         },
         {
-            type: 'history',
+            type: `maps`,
+            number: 7,
         },
         {
-            type: 'pictures',
-            number: 1,
+            type: `history`,
         },
     ],
     [
         {
-            type: 'maps',
-            number: 1,
+            type: `maps`,
+            number: 3,
         },
         {
-            type: 'history',
+            type: `history`,
         },
         {
-            type: 'pictures',
-            number: 1,
+            type: `maps`,
+            number: 9,
         },
     ],
 ];
-window.PICTURE_DATA = [
+PICTURE_DATA = [
     {
         item: {
             width: 3,
             x: 15,
             y: 15,
         },
-        informationWidth: '100%',
+        informationWidth: 100,
     },
     {
         item: {
             width: 3,
-            x: 15,
-            y: 15,
+            x: 25,
+            y: 45,
         },
-        informationWidth: '100%',
+        informationWidth: 100,
     },
     {
         item: {
@@ -62,10 +62,10 @@ window.PICTURE_DATA = [
             x: 45,
             y: 15,
         },
-        informationWidth: '100%',
+        informationWidth: 100,
     },
 ];
-window.VIEW_DATA = {
+VIEW_DATA = {
     windowHeight: 0.437,
     button: {
         width: 13,
@@ -79,4 +79,4 @@ window.VIEW_DATA = {
     historyWidth: [100, 50, 75],
     mapInterval: 1,
 };
-window.renderGame();
+renderGame(VIEW_DATA, LEVEL_NUMBERS, PICTURE_DATA);
