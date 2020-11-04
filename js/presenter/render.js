@@ -4,7 +4,7 @@ import historyComponent from `js/view/history.js`;
 import itemComponent from `js/view/item.js`;
 import informationComponent from `js/view/information.js`;
 import buttonComponent from `js/view/button.js`;
-import startLevel from `js/level.js`;
+import startLevel from `js/presenter/level.js`;
 export const renderGame = (viewData, levelNumbers, pictureData) => {
     const gameElement = document.querySelector(`body`);
     const backgroundElement = new backgroundComponent(gameElement);

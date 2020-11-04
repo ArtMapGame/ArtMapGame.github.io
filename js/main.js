@@ -1,4 +1,4 @@
-import {renderGame} from `js/render.js`;
+import {renderGame} from `js/presenter/render.js`;
 LEVEL_NUMBERS = [
     [
         {
