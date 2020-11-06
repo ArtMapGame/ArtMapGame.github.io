@@ -4,6 +4,7 @@ class historyComponent extends viewComponent {
         this.setImage(`img/levels/level${index + 1}.png`);
         this.setX((100 - width) / 2);
         this.setWidth(width);
+        this.setHeight(100);
         this.hide();
     }
 };

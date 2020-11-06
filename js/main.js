@@ -42,6 +42,7 @@ window.pictureData = [
     {
         item: {
             width: 3,
+            height: 6,
             x: 15,
             y: 15,
         },
@@ -50,6 +51,7 @@ window.pictureData = [
     {
         item: {
             width: 3,
+            height: 6,
             x: 25,
             y: 45,
         },
@@ -58,6 +60,7 @@ window.pictureData = [
     {
         item: {
             width: 3,
+            height: 6,
             x: 45,
             y: 15,
         },
