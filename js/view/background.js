@@ -1,11 +1,15 @@
-import viewComponent from `js/view/view.js`;
-export default class backgroundComponent extends viewComponent {
+class backgroundComponent {
     constructor(gameElement) {
-        super();
         gameElement.style.margin = `0`;
         gameElement.style.position = `relative`;
-        this.getElement().style.position = `static`;
-        this.setImage(`img/maps/background.png`);
-        this.setWidth(100);
+        this._element = null;
+    }
+    getElement() {
+        if (!this._element) {
+            this._element = document.createElement(`img`);
+            this._element.src = `img/maps/background.png`;
+            this._element.style.width = `100%`;
+        }
+        return this._element;
     }
 };

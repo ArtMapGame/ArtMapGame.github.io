@@ -1,5 +1,4 @@
-import viewComponent from `js/view/view.js`;
-export default class mapComponent extends viewComponent {
+class mapComponent extends viewComponent {
     constructor(index) {
         super();
         this.setImage(`img/maps/world${index + 1}.png`);

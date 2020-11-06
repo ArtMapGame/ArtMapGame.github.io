@@ -1,5 +1,4 @@
-import {renderGame} from `js/presenter/render.js`;
-LEVEL_NUMBERS = [
+window.levelNumbers = [
     [
         {
             type: `history`,
@@ -35,11 +34,11 @@ LEVEL_NUMBERS = [
         },
         {
             type: `maps`,
-            number: 9,
+            number: 2,
         },
     ],
 ];
-PICTURE_DATA = [
+window.pictureData = [
     {
         item: {
             width: 3,
@@ -65,7 +64,7 @@ PICTURE_DATA = [
         informationWidth: 100,
     },
 ];
-VIEW_DATA = {
+window.viewData = {
     windowHeight: 0.437,
     button: {
         width: 13,
@@ -79,4 +78,4 @@ VIEW_DATA = {
     historyWidth: [100, 50, 75],
     mapInterval: 1,
 };
-renderGame(VIEW_DATA, LEVEL_NUMBERS, PICTURE_DATA);
+window.renderGame();

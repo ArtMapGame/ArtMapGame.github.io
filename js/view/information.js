@@ -1,5 +1,4 @@
-import viewComponent from `js/view/view.js`;
-export default class informationComponent extends viewComponent {
+class informationComponent extends viewComponent {
     constructor(data, index) {
         super();
         this.setImage(`img/informations/information${index + 1}.png`);
