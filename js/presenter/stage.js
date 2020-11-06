@@ -1,5 +1,9 @@
 (() => {
-    window.startStage = (pictureElements, historyElements, mapElements, pictureData, stageNumbers) => {
+    let buttonElements;
+    window.startStage = (pictureElements, historyElements, mapElements, pictureData, stageNumbers, buttons=null) => {
+        if (buttons) {
+            buttonElements = buttons;
+        }
         if (stageNumbers.length) {
             switch(stageNumbers[0].type) {
                 case `maps`:
@@ -14,6 +18,8 @@
                 default:
                     throw Error(`${stageNumbers[0].type} not defined(`);
             }
+        } else {
+            buttonElements.forEach(buttonElement => buttonElement.show());
         }
     };
 })();

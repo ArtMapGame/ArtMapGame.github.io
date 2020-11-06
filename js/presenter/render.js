@@ -68,7 +68,7 @@
                             maxMap = maxMap + stage.number;
                     }
                 });
-                window.startLevel(pictureElements.slice(minPicture, maxPicture), historyElements.slice(minHistory, maxHistory), mapElements.slice(minMap, maxMap), window.pictureData.slice(minPicture, maxPicture), window.levelNumbers[i]);
+                window.startStage(pictureElements.slice(minPicture, maxPicture), historyElements.slice(minHistory, maxHistory), mapElements.slice(minMap, maxMap), window.pictureData.slice(minPicture, maxPicture), window.levelNumbers[i], buttonElements);
             });
             gameElement.appendChild(buttonElements[i].getElement());
         }
