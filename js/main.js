@@ -96,8 +96,8 @@ window.viewData = {
             mouseDown: 0.2,
         },
     },
-    historySize: [{width: 80}, {width: 100}, {height: 50}],
-    mapInterval: 1,
+    historySize: [{width: 80}, {width: 100}, {height: 50}, {height: 90}],
+    mapInterval: 1000,
     item: {
         transform: 10,
         resizeSpeed: 208,
