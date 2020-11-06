@@ -1,71 +1,73 @@
-window.LEVEL_NUMBERS = [
+window.levelNumbers = [
     [
         {
-            type: 'history',
+            type: `history`,
         },
         {
-            type: 'maps',
+            type: `maps`,
             number: 5,
         },
         {
-            type: 'pictures',
+            type: `pictures`,
             number: 3,
         },
     ],
     [
         {
-            type: 'maps',
-            number: 1,
+            type: `history`,
         },
         {
-            type: 'history',
+            type: `maps`,
+            number: 7,
         },
         {
-            type: 'pictures',
-            number: 1,
+            type: `history`,
         },
     ],
     [
         {
-            type: 'maps',
-            number: 1,
+            type: `maps`,
+            number: 3,
         },
         {
-            type: 'history',
+            type: `history`,
         },
         {
-            type: 'pictures',
-            number: 1,
+            type: `maps`,
+            number: 2,
         },
     ],
 ];
-window.PICTURE_DATA = [
+window.pictureData = [
     {
         item: {
             width: 3,
+            height: 6,
             x: 15,
             y: 15,
         },
-        informationWidth: '100%',
+        informationWidth: 100,
     },
     {
         item: {
             width: 3,
-            x: 15,
-            y: 15,
+            height: 6,
+            x: 25,
+            y: 45,
         },
-        informationWidth: '100%',
+        informationWidth: 100,
     },
     {
         item: {
             width: 3,
+            height: 6,
             x: 45,
             y: 15,
         },
-        informationWidth: '100%',
+        informationWidth: 100,
     },
 ];
-window.VIEW_DATA = {
+window.viewData = {
     windowHeight: 0.437,
     button: {
         width: 13,
