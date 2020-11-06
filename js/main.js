@@ -46,7 +46,7 @@ window.pictureData = [
             x: 15,
             y: 15,
         },
-        informationWidth: 100,
+        informationSize: {width: 100},
     },
     {
         item: {
@@ -55,7 +55,7 @@ window.pictureData = [
             x: 25,
             y: 45,
         },
-        informationWidth: 100,
+        informationSize: {width: 100},
     },
     {
         item: {
@@ -64,7 +64,7 @@ window.pictureData = [
             x: 45,
             y: 15,
         },
-        informationWidth: 100,
+        informationSize: {width: 100},
     },
 ];
 window.viewData = {
@@ -78,7 +78,11 @@ window.viewData = {
             mouseDown: 0.2,
         },
     },
-    historyWidth: [100, 50, 75],
+    historySize: [{width: 80}, {width: 100}, {height: 50}],
     mapInterval: 1,
+    item: {
+        transform: 10,
+        resizeSpeed: 208,
+    }
 };
 window.renderGame();

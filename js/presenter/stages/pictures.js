@@ -5,8 +5,6 @@
             pictureElements[i].item.show();
             pictureElements[i].item.setX(pictureData[i].item.x - pictureData[i].item.width / 2);
             pictureElements[i].item.setY(pictureData[i].item.y);
-            //sizeEvent
-            //informationEvent
         }
         //endEvent
         //closeEvent

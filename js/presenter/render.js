@@ -15,16 +15,17 @@
             }
         }));
         let historyElements = [];
-        window.viewData.historyWidth.forEach((width, index) => {
-            historyElements.push(new historyComponent(width, index));
+        window.viewData.historySize.forEach((size, index) => {
+            historyElements.push(new historyComponent(size, index));
             gameElement.appendChild(historyElements[historyElements.length - 1].getElement());
         });
         let pictureElements = [];
         window.pictureMove = false;
         window.pictureData.forEach((data, index) => {
+            const informationElement = new informationComponent(data.informationSize, index);
             pictureElements.push({
-                item: new itemComponent(data, index),
-                information: new informationComponent(data, index),
+                item: new itemComponent(data.item, index, informationElement),
+                information: informationElement,
             });
             gameElement.appendChild(pictureElements[pictureElements.length - 1].item.getElement());
             gameElement.appendChild(pictureElements[pictureElements.length - 1].information.getElement());

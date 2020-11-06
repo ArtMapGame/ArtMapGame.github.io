@@ -1,9 +1,17 @@
 class informationComponent extends viewComponent {
-    constructor(data, index) {
+    constructor(size, index) {
         super();
         this.setImage(`img/informations/information${index + 1}.png`);
-        this.setX(0);
-        this.setWidth(data.informationWidth);
+        if (size.width) {
+            this.setX((100 - size.width) / 2);
+            this.setWidth(size.width);
+            this.setHeight(100);
+        } else {
+            this.setY((100 - size.height) / 2);
+            this.setWidth(100);
+            this.setHeight(size.height);
+        }
+        this.setZ(1);
         this.hide();
     }
 };
