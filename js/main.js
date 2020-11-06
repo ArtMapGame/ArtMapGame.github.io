@@ -41,28 +41,46 @@ window.levelNumbers = [
 window.pictureData = [
     {
         item: {
-            width: 3,
-            height: 6,
-            x: 15,
-            y: 15,
+            width: 4,
+            height: 3,
+            start: {
+                x: 15,
+                y: 15,
+            },
+            correct: {
+                x: 25,
+                y: 25,
+            }
         },
         informationSize: {width: 100},
     },
     {
         item: {
-            width: 3,
-            height: 6,
-            x: 25,
-            y: 45,
+            width: 2,
+            height: 8,
+            start: {
+                x: 25,
+                y: 15,
+            },
+            correct: {
+                x: 35,
+                y: 25,
+            }
         },
         informationSize: {width: 100},
     },
     {
         item: {
-            width: 3,
-            height: 6,
-            x: 45,
-            y: 15,
+            width: 4,
+            height: 5,
+            start: {
+                x: 35,
+                y: 15,
+            },
+            correct: {
+                x: 45,
+                y: 25,
+            }
         },
         informationSize: {width: 100},
     },
