@@ -1,10 +1,11 @@
 class itemComponent extends viewComponent {
-    constructor(data, index) {
+    constructor(data, index, informationElement) {
         super();
+        this.informationElement = informationElement;
         this.setImage(`img/items/item${index + 1}.png`);
         this.setX(0);
-        this.setWidth(data.item.width);
-        this.setHeight(data.item.height);
+        this.setWidth(data.width);
+        this.setHeight(data.height);
         this.hide();
         this.move = (evt) => {
             this.setX((this.startItem.x + evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
@@ -21,19 +22,46 @@ class itemComponent extends viewComponent {
                     y: this.getElement().offsetTop,
                 };
                 window.pictureMove = true;
-                document.addEventListener('mousemove', this.move);
+                document.addEventListener(`mousemove`, this.move);
             }
         };
         this.endMove = (evt) => {
             if (evt.which === 1) {
                 window.pictureMove = false;
-                document.removeEventListener('mousemove', this.move);
+                document.removeEventListener(`mousemove`, this.move);
             }
         };
-        this.addStartMoveListener();
+        this.addMoveListener();
+        this.addResizeListener();
+        this.addInformationListener();
     }
-    addStartMoveListener() {
-        this.getElement().addEventListener('mousedown', this.startMove);
-        document.addEventListener('mouseup', this.endMove);
+    addMoveListener() {
+        this.getElement().addEventListener(`mousedown`, this.startMove);
+        document.addEventListener(`mouseup`, this.endMove);
+    }
+    addResizeListener() {
+        this.size = 1;
+        this.getElement().addEventListener(`wheel`, (evt) => {
+            this.size = this.size - evt.deltaY / window.viewData.item.resizeSpeed;
+            if (this.size < 1) {
+                this.size = 1;
+            }
+            if (this.size > window.viewData.item.transform) {
+                this.size = window.viewData.item.transform;
+            }
+            this.getElement().style.transform = `scale(${this.size})`;
+        });
+    }
+    addInformationListener() {
+        this.getElement().addEventListener(`mousedown`, (evt) => {
+            if (evt.which === 2) {
+                this.informationElement.show();
+            }
+        });
+        document.addEventListener(`mouseup`, (evt) => {
+            if (evt.which === 2) {
+                this.informationElement.hide();
+            }
+        });
     }
 };

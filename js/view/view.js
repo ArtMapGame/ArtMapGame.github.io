@@ -20,6 +20,9 @@ class viewComponent {
     setY(y) {
         this.getElement().style.top = y + `%`;
     }
+    setZ(z) {
+        this.getElement().style.zIndex = z;
+    }
     setWidth(width) {
         this.getElement().style.width = width + `%`;
     }
