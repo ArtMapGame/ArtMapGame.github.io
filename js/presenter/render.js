@@ -15,8 +15,8 @@
             }
         }));
         let historyElements = [];
-        window.viewData.historyWidth.forEach((width, index) => {
-            historyElements.push(new historyComponent(width, index));
+        window.viewData.historySize.forEach((size, index) => {
+            historyElements.push(new historyComponent(size, index));
             gameElement.appendChild(historyElements[historyElements.length - 1].getElement());
         });
         let pictureElements = [];

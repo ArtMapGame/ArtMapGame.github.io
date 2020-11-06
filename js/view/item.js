@@ -34,6 +34,6 @@ class itemComponent extends viewComponent {
     }
     addStartMoveListener() {
         this.getElement().addEventListener('mousedown', this.startMove);
-        this.getElement().addEventListener('mouseup', this.endMove);
+        document.addEventListener('mouseup', this.endMove);
     }
 };

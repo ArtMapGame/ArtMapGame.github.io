@@ -78,7 +78,7 @@ window.viewData = {
             mouseDown: 0.2,
         },
     },
-    historyWidth: [100, 50, 75],
+    historySize: [{width: 80}, {width: 100}, {height: 50}],
     mapInterval: 1,
 };
 window.renderGame();
