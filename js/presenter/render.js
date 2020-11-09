@@ -8,9 +8,9 @@
         window.levelNumbers.forEach(level => level.forEach(stage => {
             if (stage.type === `maps`) {
                 for (let j = 0; j < stage.number; j++) {
-                    i = i + 1;
                     mapElements.push(new mapComponent(i));
-                    gameElement.appendChild(mapElements[i - 1].getElement());
+                    gameElement.appendChild(mapElements[i].getElement());
+                    i = i + 1;
                 }
             }
         }));

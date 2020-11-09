@@ -1,6 +1,8 @@
 class viewComponent {
     constructor() {
         this._element = null;
+        this.x = null;
+        this.y = null;
     }
     getElement() {
         if (!this._element) {
@@ -16,9 +18,11 @@ class viewComponent {
     }
     setX(x) {
         this.getElement().style.left = x + `%`;
+        this.x = x;
     }
     setY(y) {
         this.getElement().style.top = y + `%`;
+        this.y = y;
     }
     setZ(z) {
         this.getElement().style.zIndex = z;

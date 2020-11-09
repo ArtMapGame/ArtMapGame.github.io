@@ -12,12 +12,17 @@
     };
     const endStage = (evt) => {
         if (evt.keyCode === 32 || evt.key === 32) {
+            let error = 0;
             for (let i = 0; i < dataBind.stageNumbers[0].number; i++) {
+                if (Math.abs(dataBind.pictureElements[i].item.x + pictureData[i].item.width / 2 - dataBind.pictureData[i].item.correct.x) > dataBind.pictureData[i].item.width || Math.abs(dataBind.pictureElements[i].item.y - dataBind.pictureData[i].item.correct.y) > dataBind.pictureData[i].item.height) {
+                    error = error + 1;
+                }
                 dataBind.pictureElements[i].information.hide();
                 dataBind.pictureElements[i].item.resize(1);
                 dataBind.pictureElements[i].item.setX(dataBind.pictureData[i].item.correct.x - dataBind.pictureData[i].item.width / 2);
                 dataBind.pictureElements[i].item.setY(dataBind.pictureData[i].item.correct.y);
             }
+            window.errors.push(error);
             document.removeEventListener(`keydown`, endStage);
             document.addEventListener(`keydown`, startNewStage);
         }

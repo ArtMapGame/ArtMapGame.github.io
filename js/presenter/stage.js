@@ -1,8 +1,9 @@
 (() => {
     let buttonElements;
-    window.startStage = (pictureElements, historyElements, mapElements, pictureData, stageNumbers, buttons=null) => {
+    window.startStage = (pictureElements, historyElements, mapElements, pictureData, stageNumbers, buttons = null) => {
         if (buttons) {
             buttonElements = buttons;
+            window.errors = [];
         }
         if (stageNumbers.length) {
             switch(stageNumbers[0].type) {
