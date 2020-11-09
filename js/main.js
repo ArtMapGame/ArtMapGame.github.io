@@ -41,28 +41,46 @@ window.levelNumbers = [
 window.pictureData = [
     {
         item: {
-            width: 3,
-            height: 6,
-            x: 15,
-            y: 15,
+            width: 4,
+            height: 3,
+            start: {
+                x: 15,
+                y: 15,
+            },
+            correct: {
+                x: 25,
+                y: 25,
+            }
         },
         informationSize: {width: 100},
     },
     {
         item: {
-            width: 3,
-            height: 6,
-            x: 25,
-            y: 45,
+            width: 2,
+            height: 8,
+            start: {
+                x: 25,
+                y: 15,
+            },
+            correct: {
+                x: 35,
+                y: 25,
+            }
         },
         informationSize: {width: 100},
     },
     {
         item: {
-            width: 3,
-            height: 6,
-            x: 45,
-            y: 15,
+            width: 4,
+            height: 5,
+            start: {
+                x: 35,
+                y: 15,
+            },
+            correct: {
+                x: 45,
+                y: 25,
+            }
         },
         informationSize: {width: 100},
     },
@@ -78,8 +96,8 @@ window.viewData = {
             mouseDown: 0.2,
         },
     },
-    historySize: [{width: 80}, {width: 100}, {height: 50}],
-    mapInterval: 1,
+    historySize: [{width: 80}, {width: 100}, {height: 50}, {height: 90}],
+    mapInterval: 1000,
     item: {
         transform: 10,
         resizeSpeed: 208,

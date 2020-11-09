@@ -49,7 +49,7 @@ class itemComponent extends viewComponent {
             if (this.size > window.viewData.item.transform) {
                 this.size = window.viewData.item.transform;
             }
-            this.getElement().style.transform = `scale(${this.size})`;
+            this.resize(this.size);
         });
     }
     addInformationListener() {
@@ -63,5 +63,8 @@ class itemComponent extends viewComponent {
                 this.informationElement.hide();
             }
         });
+    }
+    resize(scale) {
+        this.getElement().style.transform = `scale(${scale})`;
     }
 };
