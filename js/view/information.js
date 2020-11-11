@@ -12,7 +12,7 @@ class informationComponent extends viewComponent {
             this.setWidth(100);
             this.setHeight(size.height);
         }
-        this.setZ(1);
+        this.setZ(2);
         this.hide();
     }
 };

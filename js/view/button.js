@@ -1,8 +1,8 @@
 class buttonComponent extends viewComponent {
-    constructor(index) {
+    constructor(levelNumber, index) {
         super();
         this.setImage(`img/buttons/play${index + 1}.png`);
-        this.setX((100 - (window.viewData.button.width * window.levelNumbers.length + window.viewData.button.space * (window.levelNumbers.length - 1))) / 2 + (window.viewData.button.width + window.viewData.button.space) * index);
+        this.setX((100 - (window.viewData.button.width * levelNumber + window.viewData.button.space * (levelNumber - 1))) / 2 + (window.viewData.button.width + window.viewData.button.space) * index);
         this.setY((100 - window.viewData.button.width / window.viewData.windowHeight) / 2);
         this.setWidth(window.viewData.button.width);
         this.setHeight(window.viewData.button.width / window.viewData.windowHeight);

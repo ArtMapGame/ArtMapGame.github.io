@@ -1,76 +1,65 @@
 (() => {
-    window.renderGame = () => {
+    window.renderGame = gameData => {
         const gameElement = document.querySelector(`body`);
         const backgroundElement = new backgroundComponent(gameElement);
         gameElement.appendChild(backgroundElement.getElement());
-        let mapElements = [];
-        let i = 0;
-        window.levelNumbers.forEach(level => level.forEach(stage => {
-            if (stage.type === `maps`) {
-                for (let j = 0; j < stage.number; j++) {
-                    mapElements.push(new mapComponent(i));
-                    gameElement.appendChild(mapElements[i].getElement());
-                    i = i + 1;
-                }
-            }
-        }));
-        let historyElements = [];
-        window.viewData.historySize.forEach((size, index) => {
-            historyElements.push(new historyComponent(size, index));
-            gameElement.appendChild(historyElements[historyElements.length - 1].getElement());
-        });
-        let pictureElements = [];
-        window.pictureMove = false;
-        window.pictureData.forEach((data, index) => {
-            const informationElement = new informationComponent(data.informationSize, index);
-            pictureElements.push({
-                item: new itemComponent(data.item, index, informationElement),
-                information: informationElement,
-            });
-            gameElement.appendChild(pictureElements[pictureElements.length - 1].item.getElement());
-            gameElement.appendChild(pictureElements[pictureElements.length - 1].information.getElement());
-        });
         let buttonElements = [];
-        for (let i = 0; i < window.levelNumbers.length; i++) {
-            buttonElements.push(new buttonComponent(i));
-            buttonElements[i].getElement().addEventListener(`click`, () => {
-                buttonElements[i].getElement().style.filter = `brightness(${window.viewData.button.brightness.mouseOver})`;
-                buttonElements.forEach(button => button.hide());
-                let minPicture = 0;
-                let minHistory = 0;
-                let minMap = 0;
-                for (let j = 0; j < i; j++) {
-                    window.levelNumbers[j].forEach((stage) => {
-                        switch(stage.type) {
-                            case `pictures`:
-                                minPicture = minPicture + stage.number;
-                                break
-                            case `history`:
-                                minHistory = minHistory + 1;
-                                break
-                            case `maps`:
-                                minMap = minMap + stage.number;
+        let elementIndex = {
+            map: 0,
+            history: 0,
+            picture: 0,
+        };
+        gameData.forEach((levelData, i) => {
+            let levelModel = [];
+            levelData.forEach(stageData => {
+                switch(stageData.type) {
+                    case `maps`:
+                        levelModel.push({
+                            type: `maps`,
+                            elements: [],
+                        });
+                        for (let k = 0; k < stageData.number; k = k + 1) {
+                            levelModel[levelModel.length - 1].elements.push(new mapComponent(elementIndex.map));
+                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].getElement());
+                            elementIndex.map = elementIndex.map + 1;
                         }
-                    });
+                        break;
+                    case `history`:
+                        levelModel.push({
+                            type: `history`,
+                            element: new historyComponent(stageData, elementIndex.history),
+                        });
+                        gameElement.appendChild(levelModel[levelModel.length - 1].element.getElement());
+                        elementIndex.history = elementIndex.history + 1;
+                        break;
+                    case `pictures`:
+                        levelModel.push({
+                            type: `pictures`,
+                            elements: [],
+                            mapElement: new mapComponent(elementIndex.map),
+                        });
+                        elementIndex.map = elementIndex.map + 1;
+                        for (let k = 0; k < stageData.pictures.length; k = k + 1) {
+                            const informationElement = new informationComponent(stageData.pictures[k].informationSize, elementIndex.picture);
+                            levelModel[levelModel.length - 1].elements.push({
+                                item: new itemComponent(stageData.pictures[k].item, elementIndex.picture, informationElement),
+                                information: informationElement,
+                            });
+                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].item.getElement());
+                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].information.getElement());
+                            elementIndex.picture = elementIndex.picture + 1;
+                            elementIndex.map = elementIndex.map + 1;
+                        }
+                        gameElement.appendChild(levelModel[levelModel.length - 1].mapElement.getElement());
                 }
-                let maxPicture = minPicture + 1;
-                let maxHistory = minHistory + 1;
-                let maxMap = minMap + 1;
-                window.levelNumbers[i].forEach((stage) => {
-                    switch(stage.type) {
-                        case `pictures`:
-                            maxPicture = maxPicture + stage.number;
-                            break
-                        case `history`:
-                            maxHistory = maxHistory + 1;
-                            break
-                        case `maps`:
-                            maxMap = maxMap + stage.number;
-                    }
-                });
-                window.startStage(pictureElements.slice(minPicture, maxPicture), historyElements.slice(minHistory, maxHistory), mapElements.slice(minMap, maxMap), window.pictureData.slice(minPicture, maxPicture), window.levelNumbers[i], buttonElements);
             });
+            buttonElements.push(new buttonComponent(gameData.length, i));
+                buttonElements[i].getElement().addEventListener(`click`, () => {
+                    buttonElements[i].getElement().style.filter = `brightness(${window.viewData.button.brightness.mouseOver})`;
+                    buttonElements.forEach(buttonElement => buttonElement.hide());
+                    window.startStage(levelModel, buttonElements);
+                });
             gameElement.appendChild(buttonElements[i].getElement());
-        }
-    }
+        });
+    };
 })();

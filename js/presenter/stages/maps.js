@@ -1,13 +1,15 @@
 (() => {
-    window.openMaps = (pictureElements, historyElements, mapElements, pictureData, stageNumbers, mapNumber = stageNumbers[0].number) => {
-        if (mapNumber > 0) {
-            mapElements[0].show();
+    window.openMaps = levelModel => {
+        for (let i = 0; i < levelModel[0].elements.length; i = i + 1) {
             setTimeout(() => {
-                mapElements[0].hide();
-                window.openMaps(pictureElements, historyElements, mapElements.slice(1), pictureData, stageNumbers, mapNumber - 1);
-            }, window.viewData.mapInterval);
-        } else {
-            window.startStage(pictureElements, historyElements, mapElements, pictureData, stageNumbers.slice(1));
+                levelModel[0].elements[i].show();
+            }, window.viewData.mapInterval * i);
+            setTimeout(() => {
+                levelModel[0].elements[i].hide();
+            }, window.viewData.mapInterval * (i + 1));
         }
+        setTimeout(() => {
+            window.startStage(levelModel.slice(1));
+        }, window.viewData.mapInterval * levelModel[0].elements.length);
     };
 })();

@@ -1,11 +1,13 @@
 class itemComponent extends viewComponent {
-    constructor(data, index, informationElement) {
+    constructor(dataParameter, index, informationParameter) {
         super();
-        this.informationElement = informationElement;
+        this.data = dataParameter;
+        this.informationElement = informationParameter;
         this.setImage(`img/items/item${index + 1}.png`);
         this.setX(0);
-        this.setWidth(data.width);
-        this.setHeight(data.height);
+        this.setZ(1);
+        this.setWidth(this.data.width);
+        this.setHeight(this.data.height);
         this.hide();
         this.move = (evt) => {
             this.setX((this.startItem.x + evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
