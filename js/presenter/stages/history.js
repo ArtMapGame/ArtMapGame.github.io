@@ -1,21 +1,15 @@
 (() => {
-    let dataBind;
-    const closeHistory = (evt) => {
+    let levelModel;
+    const closeHistory = evt => {
         if (evt.keyCode === 32 || evt.key === 32) {
-            dataBind.historyElements[0].hide();
+            levelModel[0].element.hide();
             document.removeEventListener(`keydown`, closeHistory);
-            window.startStage(dataBind.pictureElements, dataBind.historyElements.slice(1), dataBind.mapElements, dataBind.pictureData, dataBind.stageNumbers.slice(1));
+            window.startStage(levelModel.slice(1));
         }
     };
-    window.reciteHistory = (pictureElements, historyElements, mapElements, pictureData, stageNumbers) => {
-        historyElements[0].show();
-        dataBind = {
-            pictureElements: pictureElements,
-            historyElements: historyElements,
-            mapElements: mapElements,
-            pictureData: pictureData,
-            stageNumbers: stageNumbers,
-        };
+    window.reciteHistory = levelParameter => {
+        levelModel = levelParameter;
+        levelModel[0].element.show();
         document.addEventListener(`keydown`, closeHistory);
     };
 })();

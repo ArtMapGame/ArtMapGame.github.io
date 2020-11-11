@@ -1,7 +1,8 @@
-window.levelNumbers = [
+const GAME_DATA = [
     [
         {
             type: `history`,
+            width: 80,
         },
         {
             type: `maps`,
@@ -9,12 +10,59 @@ window.levelNumbers = [
         },
         {
             type: `pictures`,
-            number: 3,
+            pictures: [
+                {
+                    item: {
+                        width: 4,
+                        height: 3,
+                        start: {
+                            x: 15,
+                            y: 15,
+                        },
+                        correct: {
+                            x: 25,
+                            y: 25,
+                        }
+                    },
+                    informationSize: {width: 100},
+                },
+                {
+                    item: {
+                        width: 2,
+                        height: 8,
+                        start: {
+                            x: 25,
+                            y: 15,
+                        },
+                        correct: {
+                            x: 35,
+                            y: 25,
+                        }
+                    },
+                    informationSize: {width: 100},
+                },
+                {
+                    item: {
+                        width: 4,
+                        height: 5,
+                        start: {
+                            x: 35,
+                            y: 15,
+                        },
+                        correct: {
+                            x: 45,
+                            y: 25,
+                        }
+                    },
+                    informationSize: {width: 100},
+                },
+            ]
         },
     ],
     [
         {
             type: `history`,
+            width: 100,
         },
         {
             type: `maps`,
@@ -22,6 +70,7 @@ window.levelNumbers = [
         },
         {
             type: `history`,
+            height: 70,
         },
     ],
     [
@@ -31,59 +80,13 @@ window.levelNumbers = [
         },
         {
             type: `history`,
+            height: 90,
         },
         {
             type: `maps`,
             number: 2,
         },
     ],
-];
-window.pictureData = [
-    {
-        item: {
-            width: 4,
-            height: 3,
-            start: {
-                x: 15,
-                y: 15,
-            },
-            correct: {
-                x: 25,
-                y: 25,
-            }
-        },
-        informationSize: {width: 100},
-    },
-    {
-        item: {
-            width: 2,
-            height: 8,
-            start: {
-                x: 25,
-                y: 15,
-            },
-            correct: {
-                x: 35,
-                y: 25,
-            }
-        },
-        informationSize: {width: 100},
-    },
-    {
-        item: {
-            width: 4,
-            height: 5,
-            start: {
-                x: 35,
-                y: 15,
-            },
-            correct: {
-                x: 45,
-                y: 25,
-            }
-        },
-        informationSize: {width: 100},
-    },
 ];
 window.viewData = {
     windowHeight: 0.437,
@@ -96,11 +99,10 @@ window.viewData = {
             mouseDown: 0.2,
         },
     },
-    historySize: [{width: 80}, {width: 100}, {height: 50}, {height: 90}],
-    mapInterval: 1000,
+    mapInterval: 100,
     item: {
         transform: 10,
         resizeSpeed: 208,
     }
 };
-window.renderGame();
+window.renderGame(GAME_DATA);

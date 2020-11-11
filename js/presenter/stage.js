@@ -1,23 +1,20 @@
 (() => {
     let buttonElements;
-    window.startStage = (pictureElements, historyElements, mapElements, pictureData, stageNumbers, buttons = null) => {
-        if (buttons) {
-            buttonElements = buttons;
+    window.startStage = (levelModel, buttonsParameter = null) => {
+        if (buttonsParameter) {
+            buttonElements = buttonsParameter;
             window.errors = [];
         }
-        if (stageNumbers.length) {
-            switch(stageNumbers[0].type) {
+        if (levelModel.length) {
+            switch(levelModel[0].type) {
                 case `maps`:
-                    window.openMaps(pictureElements, historyElements, mapElements, pictureData, stageNumbers);
-                    break
+                    window.openMaps(levelModel);
+                    break;
                 case `history`:
-                    window.reciteHistory(pictureElements, historyElements, mapElements, pictureData, stageNumbers);
-                    break
+                    window.reciteHistory(levelModel);
+                    break;
                 case `pictures`:
-                    window.startPictures(pictureElements, historyElements, mapElements, pictureData, stageNumbers);
-                    break
-                default:
-                    throw Error(`${stageNumbers[0].type} not defined(`);
+                    window.startPictures(levelModel);
             }
         } else {
             buttonElements.forEach(buttonElement => buttonElement.show());
