@@ -90,7 +90,11 @@ const GAME_DATA = [
 ];
 window.viewData = {
     windowHeight: 0.437,
-    button: {
+    controlButton: {
+        positionX: 3,
+        width: 5,
+    },
+    startButton: {
         width: 13,
         space: 13,
         brightness: {

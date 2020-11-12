@@ -1,8 +1,12 @@
 (() => {
     window.renderGame = gameData => {
         const gameElement = document.querySelector(`body`);
-        const backgroundElement = new backgroundComponent(gameElement);
-        gameElement.appendChild(backgroundElement.getElement());
+        gameElement.appendChild(new backgroundComponent(gameElement).getElement());
+        const gameInformationElement = new gameInformationComponent();
+        gameElement.appendChild(gameInformationElement.getElement());
+        gameElement.appendChild(new informationButtonComponent(gameInformationElement).getElement());
+        const closeButtonElement = new closeButtonComponent();
+        gameElement.appendChild(closeButtonElement.getElement());
         let buttonElements = [];
         let elementIndex = {
             map: 0,
@@ -20,8 +24,8 @@
                         });
                         for (let k = 0; k < stageData.number; k = k + 1) {
                             levelModel[levelModel.length - 1].elements.push(new mapComponent(elementIndex.map));
-                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].getElement());
                             elementIndex.map = elementIndex.map + 1;
+                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].getElement());
                         }
                         break;
                     case `history`:
@@ -29,8 +33,8 @@
                             type: `history`,
                             element: new historyComponent(stageData, elementIndex.history),
                         });
-                        gameElement.appendChild(levelModel[levelModel.length - 1].element.getElement());
                         elementIndex.history = elementIndex.history + 1;
+                        gameElement.appendChild(levelModel[levelModel.length - 1].element.getElement());
                         break;
                     case `pictures`:
                         levelModel.push({
@@ -45,21 +49,23 @@
                                 item: new itemComponent(stageData.pictures[k].item, elementIndex.picture, informationElement),
                                 information: informationElement,
                             });
-                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].item.getElement());
-                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].information.getElement());
                             elementIndex.picture = elementIndex.picture + 1;
                             elementIndex.map = elementIndex.map + 1;
+                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].item.getElement());
+                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].information.getElement());
                         }
                         gameElement.appendChild(levelModel[levelModel.length - 1].mapElement.getElement());
                 }
             });
-            buttonElements.push(new buttonComponent(gameData.length, i));
-                buttonElements[i].getElement().addEventListener(`click`, () => {
-                    buttonElements[i].getElement().style.filter = `brightness(${window.viewData.button.brightness.mouseOver})`;
-                    buttonElements.forEach(buttonElement => buttonElement.hide());
-                    window.startStage(levelModel, buttonElements);
-                });
+            buttonElements.push(new startButtonComponent(gameData.length, i));
+            buttonElements[i].getElement().addEventListener(`click`, () => {
+                buttonElements[i].getElement().style.filter = `brightness(${window.viewData.startButton.brightness.mouseOver})`;
+                buttonElements.forEach(buttonElement => buttonElement.hide());
+                closeButtonElement.show();
+                window.startStage(levelModel, buttonElements, closeButtonElement);
+            });
             gameElement.appendChild(buttonElements[i].getElement());
         });
+        
     };
 })();

@@ -9,11 +9,16 @@ class itemComponent extends viewComponent {
         this.setWidth(this.data.width);
         this.setHeight(this.data.height);
         this.hide();
-        this.move = (evt) => {
+        this.move = evt => {
             this.setX((this.startItem.x + evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
             this.setY((this.startItem.y + evt.pageY - this.startMouse.y) * 100 / (document.documentElement.clientWidth * window.viewData.windowHeight));
         }
-        this.startMove = (evt) => {
+        this.addMoveListener();
+        this.addResizeListener();
+        this.addInformationListener();
+    }
+    addMoveListener() {
+        this.getElement().addEventListener(`mousedown`, evt => {
             if (evt.which === 1 && !window.pictureMove) {
                 this.startMouse = {
                     x: evt.pageX,
@@ -26,20 +31,13 @@ class itemComponent extends viewComponent {
                 window.pictureMove = true;
                 document.addEventListener(`mousemove`, this.move);
             }
-        };
-        this.endMove = (evt) => {
+        });
+        document.addEventListener(`mouseup`, evt => {
             if (evt.which === 1) {
                 window.pictureMove = false;
                 document.removeEventListener(`mousemove`, this.move);
             }
-        };
-        this.addMoveListener();
-        this.addResizeListener();
-        this.addInformationListener();
-    }
-    addMoveListener() {
-        this.getElement().addEventListener(`mousedown`, this.startMove);
-        document.addEventListener(`mouseup`, this.endMove);
+        });
     }
     addResizeListener() {
         this.size = 1;
