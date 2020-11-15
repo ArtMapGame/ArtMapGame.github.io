@@ -5,6 +5,8 @@
         if (buttonsParameter) {
             buttonElements = buttonsParameter;
             closeButtonElement = closeButtonParameter;
+            buttonElements.forEach(buttonElement => buttonElement.hide());
+            closeButtonElement.show();
             window.errors = [];
         }
         if (levelModel.length) {
@@ -21,6 +23,7 @@
                     window.startPictures(levelModel);
             }
         } else {
+            closeButtonElement.hide();
             buttonElements.forEach(buttonElement => buttonElement.show());
         }
     };

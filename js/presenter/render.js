@@ -60,8 +60,6 @@
             buttonElements.push(new startButtonComponent(gameData.length, i));
             buttonElements[i].getElement().addEventListener(`click`, () => {
                 buttonElements[i].getElement().style.filter = `brightness(${window.viewData.startButton.brightness.mouseOver})`;
-                buttonElements.forEach(buttonElement => buttonElement.hide());
-                closeButtonElement.show();
                 window.startStage(levelModel, buttonElements, closeButtonElement);
             });
             gameElement.appendChild(buttonElements[i].getElement());

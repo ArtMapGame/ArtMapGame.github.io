@@ -22,6 +22,8 @@ class closeButtonComponent extends buttonComponent {
                         this.stageModel.element.hide();
                         break;
                     case `pictures`:
+                        document.removeEventListener(`keydown`, window.endStage);
+                        document.removeEventListener(`keydown`, window.startNewStage);
                         this.stageModel.elements.forEach(element => {
                             element.item.hide();
                             element.information.hide();

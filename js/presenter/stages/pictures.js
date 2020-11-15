@@ -1,6 +1,6 @@
 (() => {
     let levelModel;
-    const startNewStage = evt => {
+    window.startNewStage = evt => {
         if (evt.keyCode === 32 || evt.key === 32) {
             levelModel[0].elements.forEach(element => {
                 element.information.hide();
@@ -8,11 +8,11 @@
                 element.item.hide();
             });
             levelModel[0].mapElement.hide();
-            document.removeEventListener(`keydown`, startNewStage);
+            document.removeEventListener(`keydown`, window.startNewStage);
             window.startStage(levelModel.slice(1));
         }
     };
-    const endStage = evt => {
+    window.endStage = evt => {
         if (evt.keyCode === 32 || evt.key === 32) {
             let error = 0;
             levelModel[0].elements.forEach(element => {
@@ -25,8 +25,8 @@
                 element.item.setY(element.item.data.correct.y);
             });
             window.errors.push(error);
-            document.removeEventListener(`keydown`, endStage);
-            document.addEventListener(`keydown`, startNewStage);
+            document.removeEventListener(`keydown`, window.endStage);
+            document.addEventListener(`keydown`, window.startNewStage);
         }
     };
     window.startPictures = levelParameter => {
@@ -37,6 +37,6 @@
             element.item.setX(element.item.data.start.x - element.item.data.width / 2);
             element.item.setY(element.item.data.start.y);
         });
-        document.addEventListener(`keydown`, endStage);
+        document.addEventListener(`keydown`, window.endStage);
     };
 })();
