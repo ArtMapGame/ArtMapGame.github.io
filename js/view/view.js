@@ -7,6 +7,7 @@ class viewComponent {
     getElement() {
         if (!this._element) {
             this._element = document.createElement(`div`);
+            this.getElement().style.display = `inline-block`;
             this.getElement().style.position = `absolute`;
             this.getElement().style.backgroundSize = `100%`;
             this.getElement().style.backgroundRepeat = `no-repeat`;
@@ -34,9 +35,9 @@ class viewComponent {
         this.getElement().style.height = height + `%`;
     }
     hide() {
-        this.getElement().style.display = `none`;
+        this.getElement().style.transform = `scale(0)`;
     }
     show() {
-        this.getElement().style.display = `inline-block`;
+        this.getElement().style.transform = `none`;
     }
 };
