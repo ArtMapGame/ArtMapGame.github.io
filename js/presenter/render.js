@@ -7,6 +7,8 @@
         gameElement.appendChild(new informationButtonComponent(gameInformationElement).getElement());
         const closeButtonElement = new closeButtonComponent();
         gameElement.appendChild(closeButtonElement.getElement());
+        const pointsElement = new pointsComponent;
+        gameElement.appendChild(pointsElement.getElement());
         let buttonElements = [];
         let elementIndex = {
             map: 0,
@@ -60,7 +62,7 @@
             buttonElements.push(new startButtonComponent(gameData.length, i));
             buttonElements[i].getElement().addEventListener(`click`, () => {
                 buttonElements[i].getElement().style.filter = `brightness(${window.viewData.startButton.brightness.mouseOver})`;
-                window.startStage(levelModel, buttonElements, closeButtonElement);
+                window.startStage(levelModel, buttonElements, closeButtonElement, pointsElement);
             });
             gameElement.appendChild(buttonElements[i].getElement());
         });

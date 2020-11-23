@@ -1,13 +1,16 @@
 (() => {
     let buttonElements;
     let closeButtonElement;
-    window.startStage = (levelModel, buttonsParameter = null, closeButtonParameter = null) => {
+    let pointsElement;
+    window.startStage = (levelModel, buttonsParameter = null, closeButtonParameter = null, pointsParameter = null) => {
         if (buttonsParameter) {
             buttonElements = buttonsParameter;
             closeButtonElement = closeButtonParameter;
+            pointsElement = pointsParameter;
             buttonElements.forEach(buttonElement => buttonElement.hide());
+            pointsElement.hide();
             closeButtonElement.show();
-            window.errors = [];
+            window.points = [];
         }
         if (levelModel.length) {
             closeButtonElement.stageModel = levelModel[0];
@@ -24,6 +27,7 @@
             }
         } else {
             closeButtonElement.hide();
+            pointsElement.resultLog();
             buttonElements.forEach(buttonElement => buttonElement.show());
         }
     };

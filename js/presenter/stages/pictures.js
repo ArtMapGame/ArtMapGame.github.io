@@ -14,17 +14,20 @@
     };
     window.endStage = evt => {
         if (evt.keyCode === 32 || evt.key === 32) {
-            let error = 0;
+            let points = 0;
             levelModel[0].elements.forEach(element => {
-                if (Math.abs(element.item.x + element.item.data.width / 2 - element.item.data.correct.x) > element.item.data.width || Math.abs(element.item.y - element.item.data.correct.y) > element.item.data.height) {
-                    error = error + 1;
+                if (Math.abs(element.item.x + element.item.data.width / 2 - element.item.data.correct.x) < element.item.data.width || Math.abs(element.item.y - element.item.data.correct.y) < element.item.data.height) {
+                    points = points + 1;
                 }
                 element.information.hide();
                 element.item.resize(1);
                 element.item.setX(element.item.data.correct.x - element.item.data.width / 2);
                 element.item.setY(element.item.data.correct.y);
             });
-            window.errors.push(error);
+            window.points.push({
+                number: points,
+                max: levelModel[0].elements.length,
+            });
             document.removeEventListener(`keydown`, window.endStage);
             document.addEventListener(`keydown`, window.startNewStage);
         }
