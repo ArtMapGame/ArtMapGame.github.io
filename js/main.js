@@ -107,6 +107,10 @@ window.viewData = {
     item: {
         transform: 10,
         resizeSpeed: 208,
-    }
+    },
+    points: {
+        size: 5,
+        style: `Arial`,
+    },
 };
 window.renderGame(GAME_DATA);
