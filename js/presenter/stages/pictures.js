@@ -16,13 +16,13 @@
         if (evt.keyCode === 32 || evt.key === 32) {
             let points = 0;
             levelModel[0].elements.forEach(element => {
-                if (Math.abs(element.item.x + element.item.data.width / 2 - element.item.data.correct.x) < element.item.data.width || Math.abs(element.item.y - element.item.data.correct.y) < element.item.data.height) {
+                if (element.item.answer) {
                     points = points + 1;
                 }
                 element.information.hide();
                 element.item.resize(1);
-                element.item.setX(element.item.data.correct.x - element.item.data.width / 2);
-                element.item.setY(element.item.data.correct.y);
+                element.item.setX(element.item.correct.x);
+                element.item.setY(element.item.correct.y);
             });
             window.points.push({
                 number: points,
@@ -37,8 +37,9 @@
         levelModel[0].mapElement.show();
         levelModel[0].elements.forEach(element => {
             element.item.show();
-            element.item.setX(element.item.data.start.x - element.item.data.width / 2);
-            element.item.setY(element.item.data.start.y);
+            element.item.answer = false;
+            element.item.setX(element.item.start.x);
+            element.item.setY(element.item.start.y);
         });
         document.addEventListener(`keydown`, window.endStage);
     };

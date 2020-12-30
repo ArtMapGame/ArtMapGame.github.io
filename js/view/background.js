@@ -3,6 +3,7 @@ class backgroundComponent {
         gameElement.style.margin = `0`;
         gameElement.style.position = `relative`;
         this._element = null;
+        gameElement.appendChild(this.getElement());
     }
     getElement() {
         if (!this._element) {

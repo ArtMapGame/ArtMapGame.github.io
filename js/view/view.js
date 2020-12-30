@@ -1,8 +1,11 @@
 class viewComponent {
-    constructor() {
+    constructor(gameElement) {
         this._element = null;
         this.x = null;
         this.y = null;
+        this.width = null;
+        this.height = null;
+        gameElement.appendChild(this.getElement());
     }
     getElement() {
         if (!this._element) {
@@ -18,11 +21,11 @@ class viewComponent {
         this.getElement().style.backgroundImage = `url(${src})`;
     }
     setX(x) {
-        this.getElement().style.left = x + `%`;
+        this.getElement().style.left = x - this.width / 2 + `%`;
         this.x = x;
     }
     setY(y) {
-        this.getElement().style.top = y + `%`;
+        this.getElement().style.top = y - this.height / 2 + `%`;
         this.y = y;
     }
     setZ(z) {
@@ -30,9 +33,11 @@ class viewComponent {
     }
     setWidth(width) {
         this.getElement().style.width = width + `%`;
+        this.width = width;
     }
     setHeight(height) {
         this.getElement().style.height = height + `%`;
+        this.height = height;
     }
     hide() {
         this.getElement().style.transform = `scale(0)`;
