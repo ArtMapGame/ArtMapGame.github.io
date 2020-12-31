@@ -1,6 +1,6 @@
 class buttonComponent extends viewComponent {
-    constructor() {
-        super();
+    constructor(gameElement) {
+        super(gameElement);
         this.addMouseListeners();
     }
     addMouseListeners() {

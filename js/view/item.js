@@ -1,17 +1,28 @@
 class itemComponent extends viewComponent {
-    constructor(dataParameter, index, informationParameter) {
-        super();
-        this.data = dataParameter;
+    constructor(gameElement, data, index, informationParameter) {
+        super(gameElement);
+        this.start = {};
+        this.start.x = data.start.x;
+        this.start.y = data.start.y;
+        this.correct = {};
+        this.correct.x = data.correct.x;
+        this.correct.y = data.correct.y;
+        this.correct.width = data.correct.width;
+        this.correct.height = data.correct.height;
         this.informationElement = informationParameter;
         this.setImage(`img/items/item${index + 1}.png`);
         this.setX(0);
         this.setZ(1);
-        this.setWidth(this.data.width);
-        this.setHeight(this.data.height);
+        this.setWidth(data.width);
+        this.setHeight(data.height);
         this.hide();
         this.move = evt => {
-            this.setX((this.startItem.x + evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
-            this.setY((this.startItem.y + evt.pageY - this.startMouse.y) * 100 / (document.documentElement.clientWidth * window.viewData.windowHeight));
+            this.setX(this.startItem.x + (evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
+            this.setY(this.startItem.y + (evt.pageY - this.startMouse.y) * 100 / (document.documentElement.clientWidth * window.viewData.windowHeight));
+            this.answer = false;
+            if ((Math.abs(this.x - this.correct.x) < this.width / 2 + this.correct.width) && (Math.abs(this.y - this.correct.y) < this.height / 2 + this.correct.height)) {
+                this.answer = true;
+            }
         }
         this.addMoveListener();
         this.addResizeListener();
@@ -25,8 +36,8 @@ class itemComponent extends viewComponent {
                     y: evt.pageY,
                 };
                 this.startItem = {
-                    x: this.getElement().offsetLeft,
-                    y: this.getElement().offsetTop,
+                    x: this.x,
+                    y: this.y,
                 };
                 window.pictureMove = true;
                 document.addEventListener(`mousemove`, this.move);

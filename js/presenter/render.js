@@ -1,14 +1,11 @@
 (() => {
     window.renderGame = gameData => {
         const gameElement = document.querySelector(`body`);
-        gameElement.appendChild(new backgroundComponent(gameElement).getElement());
-        const gameInformationElement = new gameInformationComponent();
-        gameElement.appendChild(gameInformationElement.getElement());
-        gameElement.appendChild(new informationButtonComponent(gameInformationElement).getElement());
-        const closeButtonElement = new closeButtonComponent();
-        gameElement.appendChild(closeButtonElement.getElement());
-        const pointsElement = new pointsComponent;
-        gameElement.appendChild(pointsElement.getElement());
+        new backgroundComponent(gameElement).getElement();
+        const gameInformationElement = new gameInformationComponent(gameElement);
+        new informationButtonComponent(gameElement, gameInformationElement).getElement();
+        const closeButtonElement = new closeButtonComponent(gameElement);
+        const pointsElement = new pointsComponent(gameElement);
         let buttonElements = [];
         let elementIndex = {
             map: 0,
@@ -25,47 +22,43 @@
                             elements: [],
                         });
                         for (let k = 0; k < stageData.number; k = k + 1) {
-                            levelModel[levelModel.length - 1].elements.push(new mapComponent(elementIndex.map));
+                            levelModel[levelModel.length - 1].elements.push(new mapComponent(gameElement, elementIndex.map));
                             elementIndex.map = elementIndex.map + 1;
-                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].getElement());
                         }
                         break;
                     case `history`:
                         levelModel.push({
                             type: `history`,
-                            element: new historyComponent(stageData, elementIndex.history),
+                            element: new historyComponent(gameElement, stageData, elementIndex.history),
                         });
                         elementIndex.history = elementIndex.history + 1;
-                        gameElement.appendChild(levelModel[levelModel.length - 1].element.getElement());
                         break;
                     case `pictures`:
                         levelModel.push({
                             type: `pictures`,
                             elements: [],
-                            mapElement: new mapComponent(elementIndex.map),
+                            mapElement: new mapComponent(gameElement, elementIndex.map),
                         });
                         elementIndex.map = elementIndex.map + 1;
                         for (let k = 0; k < stageData.pictures.length; k = k + 1) {
-                            const informationElement = new informationComponent(stageData.pictures[k].informationSize, elementIndex.picture);
+                            const informationElement = new informationComponent(gameElement, stageData.pictures[k].informationSize, elementIndex.picture);
                             levelModel[levelModel.length - 1].elements.push({
-                                item: new itemComponent(stageData.pictures[k].item, elementIndex.picture, informationElement),
+                                item: new itemComponent(gameElement, stageData.pictures[k], elementIndex.picture, informationElement),
                                 information: informationElement,
                             });
                             elementIndex.picture = elementIndex.picture + 1;
                             elementIndex.map = elementIndex.map + 1;
-                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].item.getElement());
-                            gameElement.appendChild(levelModel[levelModel.length - 1].elements[levelModel[levelModel.length - 1].elements.length - 1].information.getElement());
                         }
-                        gameElement.appendChild(levelModel[levelModel.length - 1].mapElement.getElement());
+                        break;
+                    default:
+                        throw Error('This type of stage don`t work(');
                 }
             });
-            buttonElements.push(new startButtonComponent(gameData.length, i));
+            buttonElements.push(new startButtonComponent(gameElement, gameData.length, i));
             buttonElements[i].getElement().addEventListener(`click`, () => {
                 buttonElements[i].getElement().style.filter = `brightness(${window.viewData.startButton.brightness.mouseOver})`;
                 window.startStage(levelModel, buttonElements, closeButtonElement, pointsElement);
             });
-            gameElement.appendChild(buttonElements[i].getElement());
         });
-        
     };
 })();
