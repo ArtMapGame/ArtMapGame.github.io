@@ -168,6 +168,141 @@ const GAME_DATA = [
                         height: 0.9,
                     },
                 },
+                {
+                    informationSize: {width: 79},
+                    width: 1.5,
+                    height: 9.3,
+                    start: {
+                        x: 55,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 47.5,
+                        y: 20.6,
+                        width: 1,
+                        height: 1.8,
+                    },
+                },
+                {
+                    informationSize: {width: 79},
+                    width: 1.8,
+                    height: 8.5,
+                    start: {
+                        x: 60,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 48.8,
+                        y: 21.7,
+                        width: 0.8,
+                        height: 0.8,
+                    },
+                },
+                {
+                    informationSize: {width: 79},
+                    width: 1.9,
+                    height: 8.7,
+                    start: {
+                        x: 65,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 55.1,
+                        y: 21,
+                        width: 0.5,
+                        height: 1,
+                    },
+                },
+                {
+                    informationSize: {width: 95},
+                    width: 3.8,
+                    height: 5.6,
+                    start: {
+                        x: 70,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 70.9,
+                        y: 16.4,
+                        width: 2.2,
+                        height: 4,
+                    },
+                },
+                {
+                    informationSize: {width: 80},
+                    width: 1.1,
+                    height: 9.9,
+                    start: {
+                        x: 75,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 70.9,
+                        y: 16.4,
+                        width: 2.2,
+                        height: 4,
+                    },
+                },
+                {
+                    informationSize: {width: 88},
+                    width: 4.3,
+                    height: 4.2,
+                    start: {
+                        x: 80,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 47.5,
+                        y: 20.6,
+                        width: 1,
+                        height: 1.8,
+                    },
+                },
+                {
+                    informationSize: {width: 79},
+                    width: 1.8,
+                    height: 10,
+                    start: {
+                        x: 85,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 47.5,
+                        y: 20.6,
+                        width: 1,
+                        height: 1.8,
+                    },
+                },
+                {
+                    informationSize: {width: 90},
+                    width: 3.5,
+                    height: 5.5,
+                    start: {
+                        x: 90,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 50,
+                        y: 22.5,
+                        width: 0.7,
+                        height: 0.7,
+                    },
+                },
+                {
+                    informationSize: {width: 79},
+                    width: 1.4,
+                    height: 11,
+                    start: {
+                        x: 95,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
+                    },
+                },
             ],
         },
     ],
