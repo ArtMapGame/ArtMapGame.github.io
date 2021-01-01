@@ -328,6 +328,7 @@ window.viewData = {
     item: {
         transform: 10,
         resizeSpeed: 208,
+        answerScale: 0.3,
     },
     points: {
         size: 5,

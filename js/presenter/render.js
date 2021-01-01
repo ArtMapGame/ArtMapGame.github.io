@@ -40,10 +40,12 @@
                             mapElement: new mapComponent(gameElement, elementIndex.map),
                         });
                         elementIndex.map = elementIndex.map + 1;
+                        let corrects = [];
+                        stageData.pictures.forEach(picture => corrects.push(picture.correct));
                         for (let k = 0; k < stageData.pictures.length; k = k + 1) {
                             const informationElement = new informationComponent(gameElement, stageData.pictures[k].informationSize, elementIndex.picture);
                             levelModel[levelModel.length - 1].elements.push({
-                                item: new itemComponent(gameElement, stageData.pictures[k], elementIndex.picture, informationElement),
+                                item: new itemComponent(gameElement, stageData.pictures[k], elementIndex.picture, corrects, informationElement),
                                 information: informationElement,
                             });
                             elementIndex.picture = elementIndex.picture + 1;

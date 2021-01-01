@@ -1,5 +1,5 @@
 class itemComponent extends viewComponent {
-    constructor(gameElement, data, index, informationParameter) {
+    constructor(gameElement, data, index, corrects, informationParameter) {
         super(gameElement);
         this.start = {};
         this.start.x = data.start.x;
@@ -23,6 +23,12 @@ class itemComponent extends viewComponent {
             if ((Math.abs(this.x - this.correct.x) < this.width / 2 + this.correct.width) && (Math.abs(this.y - this.correct.y) < this.height / 2 + this.correct.height)) {
                 this.answer = true;
             }
+            this.resize(this.size);
+            corrects.forEach(correct => {
+                if ((Math.abs(this.x - correct.x) < this.width / 2 + correct.width) && (Math.abs(this.y - correct.y) < this.height / 2 + correct.height)) {
+                    this.resize(window.viewData.item.answerScale);
+                }
+            });
         }
         this.addMoveListener();
         this.addResizeListener();
