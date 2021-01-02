@@ -1,30 +1,3 @@
-/*window.viewData = {
-    windowHeight: 0.437,
-    controlButton: {
-        positionX: 3,
-        width: 5,
-    },
-    startButton: {
-        width: 13,
-        space: 13,
-        brightness: {
-            normal: 1,
-            mouseOver: 0.5,
-            mouseDown: 0.2,
-        },
-    },
-    mapInterval: 1,
-    item: {
-        transform: 10,
-        resizeSpeed: 208,
-        answerScale: 0.3,
-    },
-    points: {
-        size: 5,
-        style: `Arial`,
-        color: `#000000`,
-    },
-};*/
 window.height = 0.437;
 window.controlButton = {
     positionX: 3,
