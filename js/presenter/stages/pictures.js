@@ -20,7 +20,7 @@
                     points = points + 1;
                 }
                 element.information.hide();
-                element.item.resize(1);
+                element.item.resize(window.viewData.item.answerScale);
                 element.item.setX(element.item.correct.x);
                 element.item.setY(element.item.correct.y);
             });
