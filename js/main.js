@@ -1,3 +1,55 @@
+/*window.viewData = {
+    windowHeight: 0.437,
+    controlButton: {
+        positionX: 3,
+        width: 5,
+    },
+    startButton: {
+        width: 13,
+        space: 13,
+        brightness: {
+            normal: 1,
+            mouseOver: 0.5,
+            mouseDown: 0.2,
+        },
+    },
+    mapInterval: 1,
+    item: {
+        transform: 10,
+        resizeSpeed: 208,
+        answerScale: 0.3,
+    },
+    points: {
+        size: 5,
+        style: `Arial`,
+        color: `#000000`,
+    },
+};*/
+window.height = 0.437;
+window.controlButton = {
+    positionX: 3,
+    width: 5,
+};
+window.startButton = {
+    width: 13,
+    space: 13,
+    brightness: {
+        normal: 1,
+        mouseOver: 0.5,
+        mouseDown: 0.2,
+    },
+};
+window.mapInterval = 1;
+window.item = {
+    transform: 10,
+    resizeSpeed: 208,
+    answerScale: 0.3,
+};
+window.pointFont = {
+    size: 5,
+    style: `Arial`,
+    color: `#000000`,
+};
 const GAME_DATA = [
     [
         /*{
@@ -309,34 +361,9 @@ const GAME_DATA = [
     [],
     [],
 ];
-window.viewData = {
-    windowHeight: 0.437,
-    controlButton: {
-        positionX: 3,
-        width: 5,
-    },
-    startButton: {
-        width: 13,
-        space: 13,
-        brightness: {
-            normal: 1,
-            mouseOver: 0.5,
-            mouseDown: 0.2,
-        },
-    },
-    mapInterval: 1,
-    item: {
-        transform: 10,
-        resizeSpeed: 208,
-        answerScale: 0.3,
-    },
-    points: {
-        size: 5,
-        style: `Arial`,
-        color: `#000000`,
-    },
-};
 window.renderGame(GAME_DATA);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 document.querySelector('body').style.backgroundColor = '#000';
 var last = GAME_DATA[0][1].pictures.length - 1;
@@ -349,4 +376,3 @@ a.style.zIndex = 10;
 a.style.width = GAME_DATA[0][1].pictures[last].correct.width * 2 + '%';
 a.style.height = GAME_DATA[0][1].pictures[last].correct.height * 2 + '%';
 document.querySelector(`body`).appendChild(a);
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

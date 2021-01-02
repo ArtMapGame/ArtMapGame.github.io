@@ -58,7 +58,7 @@
             });
             buttonElements.push(new startButtonComponent(gameElement, gameData.length, i));
             buttonElements[i].getElement().addEventListener(`click`, () => {
-                buttonElements[i].getElement().style.filter = `brightness(${window.viewData.startButton.brightness.mouseOver})`;
+                buttonElements[i].getElement().style.filter = `brightness(${window.startButton.brightness.mouseOver})`;
                 window.startStage(levelModel, buttonElements, closeButtonElement, pointsElement);
             });
         });

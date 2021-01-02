@@ -2,11 +2,11 @@ class closeButtonComponent extends buttonComponent {
     constructor(gameElement) {
         super(gameElement);
         this.setImage(`img/buttons/exit.png`);
-        this.setX(100 - window.viewData.controlButton.positionX - window.viewData.controlButton.width);
-        this.setY(window.viewData.controlButton.positionX);
+        this.setX(100 - window.controlButton.positionX - window.controlButton.width);
+        this.setY(window.controlButton.positionX);
         this.setZ(2);
-        this.setWidth(window.viewData.controlButton.width);
-        this.setHeight(window.viewData.controlButton.width / window.viewData.windowHeight);
+        this.setWidth(window.controlButton.width);
+        this.setHeight(window.controlButton.width / window.height);
         this.hide();
         this.addInformationListener();
     }
