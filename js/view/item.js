@@ -18,7 +18,7 @@ class itemComponent extends viewComponent {
         this.hide();
         this.move = evt => {
             this.setX(this.startItem.x + (evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
-            this.setY(this.startItem.y + (evt.pageY - this.startMouse.y) * 100 / (document.documentElement.clientWidth * window.viewData.windowHeight));
+            this.setY(this.startItem.y + (evt.pageY - this.startMouse.y) * 100 / (document.documentElement.clientWidth * window.height));
             this.answer = false;
             if ((Math.abs(this.x - this.correct.x) < this.width / 2 + this.correct.width) && (Math.abs(this.y - this.correct.y) < this.height / 2 + this.correct.height)) {
                 this.answer = true;
@@ -26,7 +26,7 @@ class itemComponent extends viewComponent {
             this.resize(this.size);
             corrects.forEach(correct => {
                 if ((Math.abs(this.x - correct.x) < this.width / 2 + correct.width) && (Math.abs(this.y - correct.y) < this.height / 2 + correct.height)) {
-                    this.resize(window.viewData.item.answerScale);
+                    this.resize(window.item.answerScale);
                 }
             });
         }
@@ -59,12 +59,12 @@ class itemComponent extends viewComponent {
     addResizeListener() {
         this.size = 1;
         this.getElement().addEventListener(`wheel`, (evt) => {
-            this.size = this.size - evt.deltaY / window.viewData.item.resizeSpeed;
+            this.size = this.size - evt.deltaY / window.item.resizeSpeed;
             if (this.size < 1) {
                 this.size = 1;
             }
-            if (this.size > window.viewData.item.transform) {
-                this.size = window.viewData.item.transform;
+            if (this.size > window.item.transform) {
+                this.size = window.item.transform;
             }
             this.resize(this.size);
         });
