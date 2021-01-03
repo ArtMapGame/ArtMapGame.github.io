@@ -8,6 +8,7 @@ class pointsComponent extends viewComponent {
         this.getElement().style.fontSize = `${window.pointFont.size}vw`;
         this.getElement().style.fontFamily = window.pointFont.style;
         this.getElement().style.color = window.pointFont.color;
+        this.getElement().style.whiteSpace = 'pre-wrap';
         this.hide();
     }
     resultLog() {
@@ -16,8 +17,12 @@ class pointsComponent extends viewComponent {
     }
     getResult() {
         let result = ``;
-        window.points.forEach(point => {
-            result = `${result} ${point.number}/${point.max}`;
+        window.points.forEach((point, i) => {
+            if (i != 0) {
+                result = `${result}     ${point.number}/${point.max}`;
+            } else {
+                result = `${point.number}/${point.max}`;
+            }
         });
         return result;
     }
