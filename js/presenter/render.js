@@ -49,7 +49,6 @@
                                 information: informationElement,
                             });
                             elementIndex.picture = elementIndex.picture + 1;
-                            elementIndex.map = elementIndex.map + 1;
                         }
                         break;
                     default:
