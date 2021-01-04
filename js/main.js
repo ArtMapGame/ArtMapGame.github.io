@@ -345,10 +345,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 45.3,
-                        y: 23.8,
-                        width: 1.3,
-                        height: 2.3,
+                        x: 43.8,
+                        y: 28.3,
+                        width: 1.5,
+                        height: 1.9,
                     },
                 },
                 {
@@ -360,10 +360,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 82.3,
-                        y: 75,
-                        width: 5.5,
-                        height: 10,
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
                     },
                 },
                 {
@@ -375,10 +375,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 43.8,
-                        y: 28.3,
-                        width: 1.5,
-                        height: 1.9,
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
                     },
                 },
                 {
@@ -390,10 +390,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 59.7,
-                        y: 18.4,
-                        width: 0.7,
-                        height: 1.2,
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
                     },
                 },
                 {
@@ -405,10 +405,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 58.7,
-                        y: 18.4,
-                        width: 0.8,
-                        height: 1.8,
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
                     },
                 },
                 {
@@ -420,10 +420,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 76.4,
-                        y: 54.4,
-                        width: 2.8,
-                        height: 2,
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
                     },
                 },
                 {
@@ -450,10 +450,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 45.3,
-                        y: 23.8,
-                        width: 1.3,
-                        height: 2.3,
+                        x: 58.7,
+                        y: 18.4,
+                        width: 0.8,
+                        height: 1.8,
                     },
                 },
                 {
@@ -465,10 +465,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 45.3,
-                        y: 23.8,
-                        width: 1.3,
-                        height: 2.3,
+                        x: 59.7,
+                        y: 18.4,
+                        width: 0.7,
+                        height: 1.2,
                     },
                 },
                 {
@@ -480,10 +480,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 27,
-                        y: 84.2,
-                        width: 2.1,
-                        height: 11.2,
+                        x: 45.3,
+                        y: 23.8,
+                        width: 1.3,
+                        height: 2.3,
                     },
                 },
                 {
@@ -495,10 +495,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 45.3,
-                        y: 23.8,
-                        width: 1.3,
-                        height: 2.3,
+                        x: 76.4,
+                        y: 54.4,
+                        width: 2.8,
+                        height: 2,
                     },
                 },
                 {
@@ -525,10 +525,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 45.3,
-                        y: 23.8,
-                        width: 1.3,
-                        height: 2.3,
+                        x: 82.3,
+                        y: 75,
+                        width: 5.5,
+                        height: 10,
                     },
                 },
                 {
@@ -540,10 +540,10 @@ const GAME_DATA = [
                         y: 93.3,
                     },
                     correct: {
-                        x: 45.3,
-                        y: 23.8,
-                        width: 1.3,
-                        height: 2.3,
+                        x: 27,
+                        y: 84.2,
+                        width: 2.1,
+                        height: 11.2,
                     },
                 },
             ],
@@ -594,13 +594,13 @@ window.renderGame(GAME_DATA);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 document.querySelector('body').style.backgroundColor = '#000';
-var last = GAME_DATA[0][1].pictures.length - 1;
+var last = GAME_DATA[0][2].pictures.length - 1;
 var a = document.createElement('div');
 a.style.border = '3px solid #000000';
 a.style.position = 'absolute';
-a.style.left = GAME_DATA[0][1].pictures[last].correct.x - GAME_DATA[0][1].pictures[last].correct.width + '%';
-a.style.top = GAME_DATA[0][1].pictures[last].correct.y - GAME_DATA[0][1].pictures[last].correct.height + '%';
+a.style.left = GAME_DATA[0][2].pictures[last].correct.x - GAME_DATA[0][2].pictures[last].correct.width + '%';
+a.style.top = GAME_DATA[0][2].pictures[last].correct.y - GAME_DATA[0][2].pictures[last].correct.height + '%';
 a.style.zIndex = 10;
-a.style.width = GAME_DATA[0][1].pictures[last].correct.width * 2 + '%';
-a.style.height = GAME_DATA[0][1].pictures[last].correct.height * 2 + '%';
+a.style.width = GAME_DATA[0][2].pictures[last].correct.width * 2 + '%';
+a.style.height = GAME_DATA[0][2].pictures[last].correct.height * 2 + '%';
 document.querySelector(`body`).appendChild(a);
