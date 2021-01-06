@@ -21,8 +21,8 @@
                 }
                 element.information.hide();
                 element.item.resize(window.item.answerScale);
-                element.item.setX(element.item.correct.x);
-                element.item.setY(element.item.correct.y);
+                element.item.setX(window.random(element.item.correct.x - element.item.correct.width + (element.item.width * window.item.answerScale / 2), element.item.correct.x + element.item.correct.width - (element.item.width * window.item.answerScale / 2)));
+                element.item.setY(window.random(element.item.correct.y - element.item.correct.height + (element.item.height * window.item.answerScale / 2), element.item.correct.y + element.item.correct.height - (element.item.height * window.item.answerScale / 2)));
             });
             window.points.push({
                 number: points,
