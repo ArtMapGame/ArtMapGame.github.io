@@ -1,0 +1,5 @@
+(() => {
+    window.random = (min, max) => {
+        return (max - min) * Math.random() + min;
+    };
+})();

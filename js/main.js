@@ -526,9 +526,9 @@ const GAME_DATA = [
                     },
                     correct: {
                         x: 82.3,
-                        y: 75,
+                        y: 77,
                         width: 5.5,
-                        height: 10,
+                        height: 11.7,
                     },
                 },
                 {
