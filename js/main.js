@@ -548,6 +548,356 @@ const GAME_DATA = [
                 },
             ],
         },
+        {
+            type: 'pictures',
+            pictures: [
+                {
+                    informationSize: {width: 61},
+                    width: 4.2,
+                    height: 6.8,
+                    start: {
+                        x: 5,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 59.4,
+                        y: 33.9,
+                        width: 2.8,
+                        height: 4.6,
+                    },
+                },
+                {
+                    informationSize: {width: 34},
+                    width: 3,
+                    height: 9,
+                    start: {
+                        x: 10,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 82.3,
+                        y: 77,
+                        width: 5.5,
+                        height: 11.7,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.3,
+                    height: 6.4,
+                    start: {
+                        x: 15,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 49,
+                        y: 11.8,
+                        width: 2.6,
+                        height: 3.3,
+                    },
+                },
+                {
+                    informationSize: {width: 27},
+                    width: 2.7,
+                    height: 10,
+                    start: {
+                        x: 20,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 12.1,
+                        y: 30,
+                        width: 0.8,
+                        height: 3,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4.1,
+                    height: 6.8,
+                    start: {
+                        x: 25,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 27,
+                        y: 84.2,
+                        width: 2.1,
+                        height: 11.2,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4.1,
+                    height: 6.8,
+                    start: {
+                        x: 30,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 49.4,
+                        y: 38,
+                        width: 2.1,
+                        height: 4.1,
+                    },
+                },
+                {
+                    informationSize: {width: 89},
+                    width: 5,
+                    height: 5.6,
+                    start: {
+                        x: 35,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 14.4,
+                        y: 28.6,
+                        width: 0.9,
+                        height: 1.7,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.4,
+                    height: 6.5,
+                    start: {
+                        x: 40,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 42.5,
+                        y: 28.7,
+                        width: 0.4,
+                        height: 1.4,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.3,
+                    height: 6.4,
+                    start: {
+                        x: 45,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 61.7,
+                        y: 27.4,
+                        width: 2.3,
+                        height: 2.3,
+                    },
+                },
+                {
+                    informationSize: {width: 93},
+                    width: 4.9,
+                    height: 5.3,
+                    start: {
+                        x: 50,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 70.9,
+                        y: 16.4,
+                        width: 2.2,
+                        height: 4,
+                    },
+                },
+                {
+                    informationSize: {width: 66},
+                    width: 4.3,
+                    height: 6.5,
+                    start: {
+                        x: 55,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 43.8,
+                        y: 28.3,
+                        width: 1.5,
+                        height: 1.9,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.5,
+                    height: 6.5,
+                    start: {
+                        x: 60,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 44.1,
+                        y: 18.6,
+                        width: 1.2,
+                        height: 2.2,
+                    },
+                },
+                {
+                    informationSize: {width: 29},
+                    width: 2.8,
+                    height: 9.9,
+                    start: {
+                        x: 65,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 43.8,
+                        y: 28.3,
+                        width: 1.5,
+                        height: 1.9,
+                    },
+                },
+                {
+                    informationSize: {width: 85},
+                    width: 5,
+                    height: 5.9,
+                    start: {
+                        x: 70,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 57.5,
+                        y: 28.4,
+                        width: 0.7,
+                        height: 1,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.2,
+                    height: 6.4,
+                    start: {
+                        x: 75,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 66.8,
+                        y: 21.1,
+                        width: 0.8,
+                        height: 1,
+                    },
+                },
+                {
+                    informationSize: {width: 33},
+                    width: 3,
+                    height: 9.1,
+                    start: {
+                        x: 80,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 48.2,
+                        y: 27.4,
+                        width: 1.5,
+                        height: 3.5,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.3,
+                    height: 6.4,
+                    start: {
+                        x: 85,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 52.6,
+                        y: 12.4,
+                        width: 0.9,
+                        height: 1.9,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4.1,
+                    height: 7,
+                    start: {
+                        x: 90,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 49,
+                        y: 13.4,
+                        width: 1.3,
+                        height: 4.1,
+                    },
+                },
+                {
+                    informationSize: {width: 63},
+                    width: 4.5,
+                    height: 6,
+                    start: {
+                        x: 95,
+                        y: 95,
+                    },
+                    correct: {
+                        x: 45.1,
+                        y: 37,
+                        width: 2.7,
+                        height: 5.8,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4,
+                    height: 6.7,
+                    start: {
+                        x: 5,
+                        y: 75,
+                    },
+                    correct: {
+                        x: 67.2,
+                        y: 19.1,
+                        width: 0.4,
+                        height: 0.9,
+                    },
+                },
+                {
+                    informationSize: {width: 36},
+                    width: 3,
+                    height: 8.4,
+                    start: {
+                        x: 5,
+                        y: 85,
+                    },
+                    correct: {
+                        x: 43.8,
+                        y: 28.3,
+                        width: 1.5,
+                        height: 1.9,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4,
+                    height: 6.7,
+                    start: {
+                        x: 95,
+                        y: 75,
+                    },
+                    correct: {
+                        x: 83.2,
+                        y: 10.5,
+                        width: 3.6,
+                        height: 2.3,
+                    },
+                },
+                {
+                    informationSize: {width: 45},
+                    width: 3.6,
+                    height: 8.1,
+                    start: {
+                        x: 95,
+                        y: 85,
+                    },
+                    correct: {
+                        x: 23,
+                        y: 53.9,
+                        width: 1.4,
+                        height: 5.3,
+                    },
+                },
+            ],
+        },
     ],
     [],
     [],
@@ -594,13 +944,13 @@ window.renderGame(GAME_DATA);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 document.querySelector('body').style.backgroundColor = '#000';
-var last = GAME_DATA[0][2].pictures.length - 1;
+var last = GAME_DATA[0][3].pictures.length - 1;
 var a = document.createElement('div');
 a.style.border = '3px solid #000000';
 a.style.position = 'absolute';
-a.style.left = GAME_DATA[0][2].pictures[last].correct.x - GAME_DATA[0][2].pictures[last].correct.width + '%';
-a.style.top = GAME_DATA[0][2].pictures[last].correct.y - GAME_DATA[0][2].pictures[last].correct.height + '%';
+a.style.left = GAME_DATA[0][3].pictures[last].correct.x - GAME_DATA[0][3].pictures[last].correct.width + '%';
+a.style.top = GAME_DATA[0][3].pictures[last].correct.y - GAME_DATA[0][3].pictures[last].correct.height + '%';
 a.style.zIndex = 10;
-a.style.width = GAME_DATA[0][2].pictures[last].correct.width * 2 + '%';
-a.style.height = GAME_DATA[0][2].pictures[last].correct.height * 2 + '%';
+a.style.width = GAME_DATA[0][3].pictures[last].correct.width * 2 + '%';
+a.style.height = GAME_DATA[0][3].pictures[last].correct.height * 2 + '%';
 document.querySelector(`body`).appendChild(a);
