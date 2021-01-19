@@ -27,21 +27,11 @@ const GAME_DATA = [
     [
         {
             type: 'maps',
-            number: 9
-            /*
-            {
-                type: 'maps',
-                number: 9,
-            },
-            {
-                type: 'history',
-                width: 50,
-            },
-            {
-                type: 'history',
-                height: 50,
-            },
-            */
+            number: 9,
+        },
+        {
+            type: 'history',
+            width: 79,
         },
         {
             type: 'pictures',
@@ -334,6 +324,10 @@ const GAME_DATA = [
             ],
         },
         {
+            type: 'history',
+            width: 66,
+        },
+        {
             type: 'pictures',
             pictures: [
                 {
@@ -547,6 +541,10 @@ const GAME_DATA = [
                     },
                 },
             ],
+        },
+        {
+            type: 'history',
+            width: 67,
         },
         {
             type: 'pictures',
