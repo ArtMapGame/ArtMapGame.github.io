@@ -12,7 +12,7 @@ window.startButton = {
         mouseDown: 0.2,
     },
 };
-window.mapInterval = 300;
+window.mapInterval = 1;
 window.item = {
     transform: 10,
     resizeSpeed: 208,
@@ -1215,6 +1215,294 @@ const GAME_DATA = [
                 },
             ],
         },
+        {
+            type: 'history',
+            width: 59,
+        },
+        {
+            type: 'pictures',
+            pictures: [
+                {
+                    informationSize: {width: 33},
+                    width: 3.3,
+                    height: 9.9,
+                    start: {
+                        x: 6,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 55,
+                        y: 33,
+                        width: 0.8,
+                        height: 1.7,
+                    },
+                },
+                {
+                    informationSize: {width: 73},
+                    width: 5.3,
+                    height: 7.2,
+                    start: {
+                        x: 13,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 48.9,
+                        y: 31.1,
+                        width: 0.8,
+                        height: 1.8,
+                    },
+                },
+                {
+                    informationSize: {height: 99},
+                    width: 6,
+                    height: 6,
+                    start: {
+                        x: 19,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 57.6,
+                        y: 34.1,
+                        width: 0.9,
+                        height: 1.8,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4.7,
+                    height: 7.9,
+                    start: {
+                        x: 25,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 44.8,
+                        y: 18.7,
+                        width: 0.7,
+                        height: 1.5,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 5.1,
+                    height: 7.7,
+                    start: {
+                        x: 31,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 42.7,
+                        y: 18.3,
+                        width: 0.6,
+                        height: 1.2,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4.7,
+                    height: 7.9,
+                    start: {
+                        x: 38,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 53.1,
+                        y: 36.5,
+                        width: 1,
+                        height: 1.9,
+                    },
+                },
+                {
+                    informationSize: {width: 95},
+                    width: 6.1,
+                    height: 6.4,
+                    start: {
+                        x: 44,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 45.5,
+                        y: 23.2,
+                        width: 0.9,
+                        height: 1.8,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 5.1,
+                    height: 7.7,
+                    start: {
+                        x: 50,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 43.3,
+                        y: 27.2,
+                        width: 0.7,
+                        height: 1.7,
+                    },
+                },
+                {
+                    informationSize: {width: 66},
+                    width: 5.1,
+                    height: 7.7,
+                    start: {
+                        x: 56,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 45.4,
+                        y: 28.5,
+                        width: 0.7,
+                        height: 1.5,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 5.1,
+                    height: 7.7,
+                    start: {
+                        x: 63,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 47.1,
+                        y: 28.5,
+                        width: 0.7,
+                        height: 1.4,
+                    },
+                },
+                {
+                    informationSize: {width: 59},
+                    width: 4.7,
+                    height: 7.9,
+                    start: {
+                        x: 69,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 65.5,
+                        y: 38.3,
+                        width: 0.9,
+                        height: 1.7,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 4.7,
+                    height: 7.9,
+                    start: {
+                        x: 75,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 53.5,
+                        y: 28.5,
+                        width: 0.8,
+                        height: 1.7,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 5.2,
+                    height: 7.7,
+                    start: {
+                        x: 81,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 61.7,
+                        y: 21,
+                        width: 0.9,
+                        height: 1.7,
+                    },
+                },
+                {
+                    informationSize: {width: 67},
+                    width: 5.2,
+                    height: 7.7,
+                    start: {
+                        x: 88,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 51.7,
+                        y: 32,
+                        width: 0.7,
+                        height: 1.4,
+                    },
+                },
+                {
+                    informationSize: {width: 76},
+                    width: 5.3,
+                    height: 7,
+                    start: {
+                        x: 94,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 22.2,
+                        y: 58.6,
+                        width: 1,
+                        height: 2,
+                    },
+                },
+            ],
+        },
+        {
+            type: 'history',
+            width: 45,
+        },
+        {
+            type: 'pictures',
+            pictures: [
+                {
+                    informationSize: {width: 73},
+                    width: 2,
+                    height: 14,
+                    start: {
+                        x: 6,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 55.1,
+                        y: 16.1,
+                        width: 0.7,
+                        height: 1.5,
+                    },
+                },
+                {
+                    informationSize: {width: 78},
+                    width: 3.5,
+                    height: 12.5,
+                    start: {
+                        x: 11,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 65,
+                        y: 39.2,
+                        width: 0.7,
+                        height: 1.4,
+                    },
+                },
+                {
+                    informationSize: {width: 65},
+                    width: 2.6,
+                    height: 13,
+                    start: {
+                        x: 17,
+                        y: 94,
+                    },
+                    correct: {
+                        x: 75.4,
+                        y: 47.7,
+                        width: 0.7,
+                        height: 1.5,
+                    },
+                },
+            ],
+        },
     ],
     [],
 ];
@@ -1259,15 +1547,14 @@ window.renderGame(GAME_DATA);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//document.querySelector('body').style.backgroundColor = '#000';
-/*var last = GAME_DATA[1][2].pictures.length - 1;
+document.querySelector('body').style.backgroundColor = '#000';
+var last = GAME_DATA[1][7].pictures.length - 1;
 var a = document.createElement('div');
-a.style.border = '3px solid #000000';
+a.style.border = '1px solid #000000';
 a.style.position = 'absolute';
-a.style.left = GAME_DATA[1][2].pictures[last].correct.x - GAME_DATA[1][2].pictures[last].correct.width + '%';
-a.style.top = GAME_DATA[1][2].pictures[last].correct.y - GAME_DATA[1][2].pictures[last].correct.height + '%';
+a.style.left = GAME_DATA[1][7].pictures[last].correct.x - GAME_DATA[1][7].pictures[last].correct.width + '%';
+a.style.top = GAME_DATA[1][7].pictures[last].correct.y - GAME_DATA[1][7].pictures[last].correct.height + '%';
 a.style.zIndex = 10;
-a.style.width = GAME_DATA[1][2].pictures[last].correct.width * 2 + '%';
-a.style.height = GAME_DATA[1][2].pictures[last].correct.height * 2 + '%';
+a.style.width = GAME_DATA[1][7].pictures[last].correct.width * 2 + '%';
+a.style.height = GAME_DATA[1][7].pictures[last].correct.height * 2 + '%';
 document.querySelector(`body`).appendChild(a);
-*/
