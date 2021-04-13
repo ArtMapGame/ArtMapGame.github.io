@@ -2,13 +2,15 @@ class pointsComponent extends viewComponent {
     constructor(gameElement) {
         super(gameElement);
         this.setX(0);
-        this.setY(75 + window.startButton.width / 4 - window.pointFont.size / 2);
+        this.setY(80 + window.startButton.width / 4 - window.pointFont.size / 2);
         this.setWidth(100);
         this.getElement().style.textAlign = `center`;
         this.getElement().style.fontSize = `${window.pointFont.size}vw`;
         this.getElement().style.fontFamily = window.pointFont.style;
         this.getElement().style.color = window.pointFont.color;
+        this.getElement().style.fontWeight = 'bold';
         this.getElement().style.whiteSpace = 'pre-wrap';
+        this.getElement().style.backgroundColor = '#c1c1c1';
         this.hide();
     }
     resultLog() {
