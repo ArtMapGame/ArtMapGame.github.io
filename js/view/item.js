@@ -11,9 +11,7 @@ class itemComponent extends viewComponent {
         this.correct.height = data.correct.height;
         this.informationElement = informationParameter;
         this.setImage(`img/items/item${index + 1}.png`);
-        ////////////////////////////////////////////////////////
         this.getElement().style.backgroundColor = '#f00';
-        ////////////////////////////////////////////////////////
         this.setX(0);
         this.setZ(1);
         this.setWidth(data.width);
@@ -23,12 +21,12 @@ class itemComponent extends viewComponent {
             this.setX(this.startItem.x + (evt.pageX - this.startMouse.x) * 100 / document.documentElement.clientWidth);
             this.setY(this.startItem.y + (evt.pageY - this.startMouse.y) * 100 / (document.documentElement.clientWidth * window.height));
             this.answer = false;
-            if ((Math.abs(this.x - this.correct.x) < this.width / 2 + this.correct.width) && (Math.abs(this.y - this.correct.y) < this.height / 2 + this.correct.height)) {
+            if ((Math.abs(this.x - this.correct.x) < this.width / 2 * window.item.answerScale + this.correct.width) && (Math.abs(this.y - this.correct.y) < this.height / 2 * window.item.answerScale + this.correct.height)) {
                 this.answer = true;
             }
             this.resize(this.size);
             corrects.forEach(correct => {
-                if ((Math.abs(this.x - correct.x) < this.width / 2 + correct.width) && (Math.abs(this.y - correct.y) < this.height / 2 + correct.height)) {
+                if ((Math.abs(this.x - correct.x) < this.width / 2 * window.item.answerScale + correct.width) && (Math.abs(this.y - correct.y) < this.height / 2 * window.item.answerScale + correct.height)) {
                     this.resize(window.item.answerScale);
                 }
             });
