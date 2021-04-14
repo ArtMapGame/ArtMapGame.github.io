@@ -11,7 +11,6 @@ class itemComponent extends viewComponent {
         this.correct.height = data.correct.height;
         this.informationElement = informationParameter;
         this.setImage(`img/items/item${index + 1}.png`);
-        this.getElement().style.backgroundColor = '#f00';
         this.setX(0);
         this.setZ(1);
         this.setWidth(data.width);

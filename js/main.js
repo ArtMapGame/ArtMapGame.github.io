@@ -4,7 +4,7 @@ window.controlButton = {
     width: 5,
 };
 window.startButton = {
-    width: 2,
+    width: 13,
     space: 13,
     brightness: {
         normal: 1,
