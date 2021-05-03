@@ -12,7 +12,7 @@ window.startButton = {
         mouseDown: 0.2,
     },
 };
-window.mapInterval = 1;
+window.mapInterval = 1000;
 window.item = {
     transform: 10,
     resizeSpeed: 208,
