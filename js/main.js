@@ -23,6 +23,12 @@ window.pointFont = {
     style: `Bahnschrift, Arial`,
     color: `#fff`,
 };
+window.informationFont = {
+    size: 2,
+    style: `Bahnschrift, Arial`,
+    color: `#000`,
+    padding: 15,
+};
 const GAME_DATA = [
     [
         {

@@ -1,5 +1,5 @@
 class itemComponent extends viewComponent {
-    constructor(gameElement, data, index, corrects, informationParameter) {
+    constructor(gameElement, data, corrects, informationParameter, i, j, k) {
         super(gameElement);
         this.start = {};
         this.start.x = data.start.x;
@@ -10,7 +10,7 @@ class itemComponent extends viewComponent {
         this.correct.width = data.correct.width;
         this.correct.height = data.correct.height;
         this.informationElement = informationParameter;
-        this.setImage(`img/items/item${index + 1}.png`);
+        this.setImage(`img/level${i + 1}/stage${j + 1}/item${k + 1}.png`);
         this.setX(0);
         this.setZ(1);
         this.setWidth(data.width);

@@ -1,7 +1,7 @@
 class historyComponent extends viewComponent {
-    constructor(gameElement, size, index) {
+    constructor(gameElement, size, i, j) {
         super(gameElement);
-        this.setImage(`img/levels/level${index + 1}.png`);
+        this.setImage(`img/level${i + 1}/stage${j + 1}/history.png`);
         if (size.width) {
             this.setX((100 - size.width) / 2);
             this.setWidth(size.width);

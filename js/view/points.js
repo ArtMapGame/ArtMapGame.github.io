@@ -8,9 +8,9 @@ class pointsComponent extends viewComponent {
         this.getElement().style.fontSize = `${window.pointFont.size}vw`;
         this.getElement().style.fontFamily = window.pointFont.style;
         this.getElement().style.color = window.pointFont.color;
-        this.getElement().style.fontWeight = 'bold';
-        this.getElement().style.whiteSpace = 'pre-wrap';
-        this.getElement().style.backgroundColor = '#c1c1c1';
+        this.getElement().style.fontWeight = `bold`;
+        this.getElement().style.whiteSpace = `pre-wrap`;
+        this.getElement().style.backgroundColor = `#c1c1c1`;
         this.hide();
     }
     resultLog() {

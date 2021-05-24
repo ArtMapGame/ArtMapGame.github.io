@@ -2,7 +2,7 @@ class informationButtonComponent extends buttonComponent {
     constructor(gameElement, informationElement) {
         super(gameElement);
         this.informationElement = informationElement;
-        this.setImage(`img/buttons/i.png`);
+        this.setImage(`img/interface/i.png`);
         this.setX(window.controlButton.positionX);
         this.setY(window.controlButton.positionX);
         this.setZ(2);

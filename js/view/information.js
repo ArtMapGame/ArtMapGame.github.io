@@ -1,17 +1,17 @@
 class informationComponent extends viewComponent {
-    constructor(gameElement, size, index) {
+    constructor(gameElement, text) {
         super(gameElement);
-        this.setImage(`img/informations/information${index + 1}.png`);
-        if (size.width) {
-            this.setX((100 - size.width) / 2);
-            this.setWidth(size.width);
-            this.setHeight(100);
-        } else {
-            this.setX(0);
-            this.setY((100 - size.height) / 2);
-            this.setWidth(100);
-            this.setHeight(size.height);
-        }
+        this.setWidth(100);
+        this.setX(50);
+        this.setY(50);
+        this.getElement().textContent = text;
+        this.getElement().style.boxSizing = `border-box`;
+        this.getElement().style.padding = `0 ${window.informationFont.padding}% 0 ${window.informationFont.padding}%`;
+        this.getElement().style.textAlign = `center`;
+        this.getElement().style.fontSize = `${window.informationFont.size}vw`;
+        this.getElement().style.fontFamily = window.informationFont.style;
+        this.getElement().style.color = window.informationFont.color;
+        this.getElement().style.fontWeight = `bold`;
         this.setZ(2);
         this.hide();
     }
