@@ -1,7 +1,7 @@
 class closeButtonComponent extends buttonComponent {
     constructor(gameElement) {
         super(gameElement);
-        this.setImage(`img/buttons/exit.png`);
+        this.setImage(`img/interface/exit.png`);
         this.setX(100 - window.controlButton.positionX - window.controlButton.width);
         this.setY(window.controlButton.positionX);
         this.setZ(2);

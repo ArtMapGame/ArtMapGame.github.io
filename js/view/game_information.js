@@ -1,7 +1,7 @@
 class gameInformationComponent extends viewComponent {
     constructor(gameElement) {
         super(gameElement);
-        this.setImage(`img/informations/inf.png`);
+        this.setImage(`img/interface/information.png`);
         this.setX(0);
         this.setZ(1);
         this.setWidth(100);

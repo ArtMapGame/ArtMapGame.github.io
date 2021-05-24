@@ -12,7 +12,7 @@ window.startButton = {
         mouseDown: 0.2,
     },
 };
-window.mapInterval = 1;
+window.mapInterval = 1000;
 window.item = {
     transform: 10,
     resizeSpeed: 208,
@@ -22,6 +22,12 @@ window.pointFont = {
     size: 5,
     style: `Bahnschrift, Arial`,
     color: `#fff`,
+};
+window.informationFont = {
+    size: 2,
+    style: `Bahnschrift, Arial`,
+    color: `#000`,
+    padding: 15,
 };
 const GAME_DATA = [
     [
